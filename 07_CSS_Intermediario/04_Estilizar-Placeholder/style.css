@@ -1,0 +1,23 @@
+.input{
+    width: 400px;
+    height: 50px;
+    font-size: 27px;
+}
+.input::-webkit-input-placeholder{/* Webkit, Blink, Edge */
+    color: green;
+}
+.input:-moz-placeholder{/* Firefox 4-18 */
+    color: green;
+}
+.input::-moz-placeholder{/* Firefox 19++ */
+    color: green;
+}
+.input:-ms-input-placeholder{/* Internet Explore 10-11 */
+    color: green;
+}
+.input::-ms-input-placeholder{/* Microsoft Edgee */
+    color: green;
+}
+.input::placeholder{/* Todos os Navegadores Modernos */
+    color: green;
+}

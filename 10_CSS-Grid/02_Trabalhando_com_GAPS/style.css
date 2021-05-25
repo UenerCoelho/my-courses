@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px 10px;
+    /* gap: 10px;  *//*mesma função do item acima, para espaçamento entre linhas e colunas*/
+    /* column-gap: 10px; *//*Para espaçamento entre colunas no grid*/
+    /* row-gap: 10px; *//*Para espaçamento entre linhas no grid*/
+
+}
+.item{
+    background-color: #0000FF;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 20px;
+    color: #FFF;
+    font-size: 20px;
+}

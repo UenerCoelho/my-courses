@@ -1,0 +1,19 @@
+/* body{
+    margin: auto;
+} */
+.container{
+    /* width: 700px; */
+    display: grid;
+    /* grid-template-columns: 200px repeat(3, 1fr) 200px; */
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-gap: 10px 10px;
+
+}
+.item{
+    background-color: #0000FF;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 20px;
+    color: #FFF;
+    font-size: 20px;
+}
