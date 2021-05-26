@@ -1,0 +1,62 @@
+<!-- 
+    <button>
+      - Representa um botão
+      - Usado para enviar formulários
+      - É estilizado pelo user agent
+    
+    Atributos comuns
+      - type
+        - submit
+        - reset
+        - button
+      - autofocus
+      - disabled
+      - name
+      - value
+      - form
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Button</title>
+</head>
+
+<body>
+  <button type="button">Button</button><br>
+
+  <button type="submit">Submit</button><br>
+
+
+  <form action="">
+    <input type="text" value="Limpa o que foi escrito">
+    <button type="reset">Reset</button>
+  </form>
+
+  <button type="menu">Menu</button><br>
+  <!-- 
+    Name
+      para receber o value
+   -->
+  <button type="submit" name="button" value="Valor a ser Recebido">Enviar</button><br>
+
+  <!-- 
+    Atributo form
+      para linkar a um determinado form
+   -->
+  <form action="" id="my-form"></form>
+  <button type="submit" form="my-form">Form</button><br>
+
+
+  <button autofocus>Autofocus</button><br>
+  <button disabled>Disabled</button><br>
+
+
+
+
+</body>
+
+</html>
