@@ -1,16 +1,15 @@
 
- # Formulários
-      
-      - Para que servem?
-            - Capturar dados de entrada (input)
-            - Interação
-            - Controle
+ # Formulário
+   - Para que servem?
+     - Capturar dados de entrada (input)
+     - Interação
+     - Controle
 
-      - Pré requisitos
-            - Básico HTML
+   - Pré requisitos
+     - Básico HTML
 
-      - Dominar
-            - Estilização
-            - Validação
-            - Controles Customizados
-            - Javascript
+   - Dominar
+     - Estilização
+     - Validação
+     - Controles Customizados
+     - Javascript
