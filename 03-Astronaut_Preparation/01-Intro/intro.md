@@ -12,8 +12,4 @@
      - Estilização
      - Validação
      - Controles Customizados
-<<<<<<< HEAD
      - Javascript
-=======
-     - Javascript
->>>>>>> 77cfa82f3046cd1d48858faf9ccecee173ee0e62
