@@ -1,0 +1,48 @@
+<!-- 
+    <input> Atributos comuns
+      - autocomplete
+          * busca sempre o dados mais utilizado com frequência, como email, endereço, etc.
+      - autofocus
+          * Deixa seta do mouse sobre o objeto escolhi, como botão, campo de texto, etc.
+      - disabled
+          * desabilita o campo/parâmetro.
+      - readonly (quase todos aceitam)
+          * Torna o campo somente leitura, sem possibilidade de alteração.
+      - value
+          * Informação do campo.
+      - form (quase todos aceitam)
+          * pode ser linkado ao input através do "id"
+      - name
+          * atributo usado para buscar dados dados do form e leva-os ao back-end.
+      - required (quase todos aceitam)
+          * Pede valores obrigatórios para serem preenchidos no form
+      - placeholder (quase todos aceitam)
+          * deixa a mensagem no campo, com a função dele, pode ser usado nos campos password, tel, email, text, url.
+
+ -->
+
+<!-- #autocomplete:  -->
+<input type="text" autocomplete="email"><br><br>
+
+<!-- #aufocus -->
+<input type="text" autofocus><br><br>
+
+<!-- #disabled -->
+<input type="text" disabled value="disabled"><br><br>
+
+<!-- #readonly -->
+<input type="text" readonly value="readonly"><br><br>
+
+<!-- #form -->
+<form id="my-form"></form>
+<input type="text" form="my-form"><br><br>
+
+<!-- #name -->
+<form id="my-form-email"></form>
+<input type="email" name="email"><br><br>
+
+<!-- #required -->
+<input type="text" required><br><br>
+
+<!-- #placeholder -->
+<input type="email" placeholder="digite seu email aqui"><br><br>
