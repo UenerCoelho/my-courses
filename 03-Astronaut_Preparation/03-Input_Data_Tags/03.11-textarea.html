@@ -1,0 +1,26 @@
+<!-- 
+    <textarea>
+      - mais de uma linha
+      - útil para textos grandes
+
+      # Atributos
+        - id
+          * Serve para identificar qual é o textarea, podendo assim conecta-lo a um possível label
+        - name
+          * Serve para submetermos(enviarmos) nosso form para Back-End
+        - rows e cols
+          * Significa Linhas e Colunas respectivamente, serve para setarmos a quantidade que queremos
+        - maxlength e minlength
+          * server para setarmos o tamanho máximo do texto da textarea
+        - wrap
+          * serve para não dar quebra de linhas automáticas na textarea
+        .. outros comuns ao <input>
+            - autocomplete, autofocus, disabled, placeholder, readonly, form, required
+
+            $$ Dica:
+            - quando quebramos a linha no código, o elemento no html que o user visualiza tbm recebe a identação do código.
+ -->
+
+<label for="sms">Mensagem</label>
+<textarea name="Back-End-set" id="sms" cols="30" rows="10" minlength="30" maxlength="300" wrap="off"
+  placeholder="Digite sua mensagem aqui" required></textarea>
