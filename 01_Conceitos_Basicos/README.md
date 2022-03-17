@@ -4,4 +4,4 @@
 
 ## O que são Tags HTML
 
-<p>Tag é nome dos elementos de um arquivo HTML, como por exemplo a tag '''<p></p>''' utilizado para paragrafo, ou a tag ```<h1></h1>```</p>
+<p>Tag é nome dos elementos de um arquivo HTML, como por exemplo a tag ~~~html<p></p>~~~ utilizado para paragrafo, ou a tag ~~~html<h1></h1>~~~</p>
