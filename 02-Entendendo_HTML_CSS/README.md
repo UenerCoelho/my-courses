@@ -2,23 +2,23 @@
 
 ## Lista das Aulas:
 
-1. [O que é indentação?](#1.-O-que-é-indentação?)
-2. [Tags Básicas (1/2)](#Tags-Básicas)
-3. [Tags Básicas (2/2)](#Tags-Básicas)
-4. [O que é e como usar o CSS? (1/2)](#O-que-é-e-como-usar-o-CSS?)
-5. [O que é e como usar o CSS? (2/2)](#O-que-é-e-como-usar-o-CSS?)
-6. [A base geral do CSS](#A-base-geral-do-CSS)
-7. [Cores no CSS](#7.-Cores-no-CSS)]
-8. [Bordas no CSS](#Bordas-no-CSS)
-9. [Margins e Padding no CSS](#Margins-e-Padding-no-CSS)
-10. [Width/height no CSS](#Width/height-no-CSS)
-11. [Dicas sobre Width/Height](#Dicas-sobre-Width/Height)
-12. [Links (1/2)](#Links)
-13. [Links (2/2)](#Links)
-14. [Formatação de textos no HTML](#Formatação-de-textos-no-HTML)
-15. [Comentários no HTML](#Comentários-no-HTML)
+1. [O que é indentação?](#1.-o-que-é-indentação?)
+2. [Tags Básicas (1/2)](#tags-básicas)
+3. [Tags Básicas (2/2)](#tags-básicas)
+4. [O que é e como usar o CSS? (1/2)](#o-que-é-e-como-usar-o-css?)
+5. [O que é e como usar o CSS? (2/2)](#o-que-é-e-como-usar-o-css?)
+6. [A base geral do CSS](#a-base-geral-do-cSS)
+7. [Cores no CSS](#7.-cores-no-css)]
+8. [Bordas no CSS](#bordas-no-css)
+9. [Margins e Padding no CSS](#margins-e-padding-no-css)
+10. [Width/height no CSS](#width/height-no-css)
+11. [Dicas sobre Width/Height](#dicas-sobre-width/height)
+12. [Links (1/2)](#links)
+13. [Links (2/2)](#links)
+14. [Formatação de textos no HTML](#formatação-de-textos-no-html)
+15. [Comentários no HTML](#comentários-no-html)
 
-### 1. O que é indentação? ([voltar ao Início](#Lista-das-Aulas:))
+### 1. O que é indentação?
 
 - Consiste em diferenciar, com a tecla tabulação, para diferenciar as linhas e os escopos do código.
 
@@ -42,7 +42,9 @@
 </html>
 ```
 
-### 2-3. Tags Básicas ([voltar ao Início](#Lista-das-Aulas:))
+[Voltar ao Início](#lista-das-aulas:)
+
+### 2-3. Tags Básicas
 
 ```html
 <!DOCTYPE html>
@@ -90,7 +92,9 @@
 </html>
 ```
 
-### 4-5. O que é e como usar o CSS? ([voltar ao Início](#Lista-das-Aulas:))
+[Voltar ao Início](#lista-das-aulas:)
+
+### 4-5. O que é e como usar o CSS?
 
 - CSS é um documento no qual o usuário não tem acesso normalmente, responsável por estilizar a pagina HTML. Essa estilização é uma formatação do arquivo HTML, podemos trocar cores de fundo, adicionar imagens, cores das letras, tamanhos das boxes (div, section, nav, main, etc).
 
@@ -102,33 +106,63 @@
 
   - ex.:
 
-    ```html
-    <html>
-      <head>
-        <title>Título</title>
-      </head>
-      <!-- CSS inline no body para mudar os espaçamentos de margin e padding -->
-      <body style="padding: 0, margin: auto">
-        <!-- CSS inline na "div" para adicionar cor branca no fundo -->
-        <div styles="background-color: #fff">
-          <!-- CSS inline no "h1" para trocar a cor do texto para verde -->
-          <h1 style="color: green">Título da Página</h1>
-          <!-- CSS inline para aumentar o tamanho do texto -->
-          <p style="font-size: 30px">Loren ipsum, lorem ipsum, etc</p>
-        </div>
-      </body>
-    </html>
-    ```
+        ```html
+        <html>
+          <head>
+            <title>Título</title>
+          </head>
+          <!-- CSS inline no body para mudar os espaçamentos de margin e padding -->
+          <body style="padding: 0, margin: auto">
+            <!-- CSS inline na "div" para adicionar cor branca no fundo -->
+            <div styles="background-color: #fff">
+              <!-- CSS inline no "h1" para trocar a cor do texto para verde -->
+              <h1 style="color: green">Título da Página</h1>
+              <!-- CSS inline para aumentar o tamanho do texto -->
+              <p style="font-size: 30px">Loren ipsum, lorem ipsum, etc</p>
+            </div>
+          </body>
+        </html>
+        ```
 
-    2. CSS Interno: coloca-se o código CSS em um único local na página, normalmente utilizado dentro da tag "head".
+        2. CSS Interno: coloca-se o código CSS em um único local na página, normalmente utilizado dentro da tag "head".
 
-    - ex.:
+        - ex.:
 
-    ```html
-    <html>
-      <head>
-        <!-- CSS interno, estilando da mesma forma que foi feito no exemplo anterior. -->
-        <style>
+        ```html
+        <html>
+          <head>
+            <!-- CSS interno, estilando da mesma forma que foi feito no exemplo anterior. -->
+            <style>
+              body {
+                padding: 0;
+                margin: auto;
+              }
+              div {
+                background-color: #fff;
+              }
+              h1 {
+                color: green;
+              }
+              p {
+                font-size: 30px;
+              }
+            </style>
+          </head>
+          <body>
+            <div>
+              <h1></h1>
+              <h2></h2>
+              <p></p>
+            </div>
+          </body>
+        </html>
+        ```
+
+        3. CSS Externo: quando criamos um arquivo com a extensão "\*.css" dentro da pasta do projeto, normalmente seguindo a estrutura de pasta "projeto/assets/css". Neste arquivo colocamos somente o código css.
+
+        - ex.:
+          <!-- Código CSS externo, para inserir a mesma estilização do primeiro exemplo. -->
+          ```css
           body {
             padding: 0;
             margin: auto;
@@ -142,39 +176,11 @@
           p {
             font-size: 30px;
           }
-        </style>
-      </head>
-      <body>
-        <div>
-          <h1></h1>
-          <h2></h2>
-          <p></p>
-        </div>
-      </body>
-    </html>
-    ```
+          ```
 
-    3. CSS Externo: quando criamos um arquivo com a extensão "\*.css" dentro da pasta do projeto, normalmente seguindo a estrutura de pasta "projeto/assets/css". Neste arquivo colocamos somente o código css.
+    [Voltar ao Início](#lista-das-aulas:)
 
-    - ex.:
-      <!-- Código CSS externo, para inserir a mesma estilização do primeiro exemplo. -->
-      ```css
-      body {
-        padding: 0;
-        margin: auto;
-      }
-      div {
-        background-color: #fff;
-      }
-      h1 {
-        color: green;
-      }
-      p {
-        font-size: 30px;
-      }
-      ```
-
-### 6. A base geral do CSS ([voltar ao Início](#Lista-das-Aulas:))
+### 6. A base geral do CSS
 
 - Base geral do CSS é adicionar estilos a objetos e elementos HTML, mas existem algumas formas mais utilizadas de selecionar o mesmo, ou elementos e objetos diferentes. Abaixo alguns exemplos:
 
@@ -225,18 +231,36 @@
 
 - Para tanto, devemos lembrar das boas práticas, e termos cuidado para não utilizarmos palavras reservadas, refente a sintaxe do "html" e "css". As boas práticas consiste em seguir uma semântica na digitação do código, para que o próximos profissional que for trabalhar numa, possível refatoração, possam entender, por isso, devemos nomear as "ids", "classes" em inglês e que faça ao menos uma referencia do que se propõe.
 
-### 7. Cores no CSS ([voltar ao Início](#Lista-das-Aulas:))
+[Voltar ao Início](#lista-das-aulas:)
 
-### 8. Bordas no CSS ([voltar ao Início](#Lista-das-Aulas:))
+### 7. Cores no CSS
 
-### 9. Margins e Padding no CSS ([voltar ao Início](#Lista-das-Aulas:))
+[Voltar ao Início](#lista-das-aulas:)
 
-### 10. Width/height no CSS ([voltar ao Início](#Lista-das-Aulas:))
+### 8. Bordas no CSS
 
-### 11. Dicas sobre Width/Height ([voltar ao Início](#Lista-das-Aulas:))
+[Voltar ao Início](#lista-das-aulas:)
 
-### 12. Links ([voltar ao Início](#Lista-das-Aulas:))
+### 9. Margins e Padding no CSS
 
-### 14. Formatação de textos no HTML ([voltar ao Início](#Lista-das-Aulas:))
+[Voltar ao Início](#lista-das-aulas:)
 
-### 15. Comentários no HTML ([voltar ao Início](#Lista-das-Aulas:))
+### 10. Width/height no CSS
+
+[Voltar ao Início](#lista-das-aulas:)
+
+### 11. Dicas sobre Width/Height
+
+[Voltar ao Início](#lista-das-aulas:)
+
+### 12. Links
+
+[Voltar ao Início](#lista-das-aulas:)
+
+### 14. Formatação de textos no HTML
+
+[Voltar ao Início](#lista-das-aulas:)
+
+### 15. Comentários no HTML
+
+[Voltar ao Início](#lista-das-aulas:)
