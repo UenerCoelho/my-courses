@@ -2,11 +2,11 @@
 
 ## Lista das Aulas:
 
-1. [O que é indentação?](#1.-o-que-é-indentação?)
+1. [O que é indentação?](#o-que-é-indentação)
 2. [Tags Básicas (1/2)](#tags-básicas)
 3. [Tags Básicas (2/2)](#tags-básicas)
-4. [O que é e como usar o CSS? (1/2)](#o-que-é-e-como-usar-o-css?)
-5. [O que é e como usar o CSS? (2/2)](#o-que-é-e-como-usar-o-css?)
+4. [O que é e como usar o CSS? (1/2)](#o-que-é-e-como-usar-o-css)
+5. [O que é e como usar o CSS? (2/2)](#o-que-é-e-como-usar-o-css)
 6. [A base geral do CSS](#a-base-geral-do-cSS)
 7. [Cores no CSS](#7.-cores-no-css)]
 8. [Bordas no CSS](#bordas-no-css)
@@ -42,9 +42,9 @@
 </html>
 ```
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 2-3. Tags Básicas
+### Tags Básicas
 
 ```html
 <!DOCTYPE html>
@@ -92,9 +92,9 @@
 </html>
 ```
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 4-5. O que é e como usar o CSS?
+### O que é e como usar o CSS?
 
 - CSS é um documento no qual o usuário não tem acesso normalmente, responsável por estilizar a pagina HTML. Essa estilização é uma formatação do arquivo HTML, podemos trocar cores de fundo, adicionar imagens, cores das letras, tamanhos das boxes (div, section, nav, main, etc).
 
@@ -178,7 +178,7 @@
           }
           ```
 
-    [Voltar ao Início](#lista-das-aulas:)
+    [Voltar ao Início](#lista-das-aulas)
 
 ### A base geral do CSS
 
@@ -231,36 +231,36 @@
 
 - Para tanto, devemos lembrar das boas práticas, e termos cuidado para não utilizarmos palavras reservadas, refente a sintaxe do "html" e "css". As boas práticas consiste em seguir uma semântica na digitação do código, para que o próximos profissional que for trabalhar numa, possível refatoração, possam entender, por isso, devemos nomear as "ids", "classes" em inglês e que faça ao menos uma referencia do que se propõe.
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 7. Cores no CSS
+### Cores no CSS
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 8. Bordas no CSS
-
-[Voltar ao Início](#lista-das-aulas:)
-
-### 9. Margins e Padding no CSS
+### Bordas no CSS
 
 [Voltar ao Início](#lista-das-aulas:)
 
-### 10. Width/height no CSS
+### Margins e Padding no CSS
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 11. Dicas sobre Width/Height
+### Width/height no CSS
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 12. Links
+### Dicas sobre Width/Height
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 14. Formatação de textos no HTML
+### Links
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
 
-### 15. Comentários no HTML
+### Formatação de textos no HTML
 
-[Voltar ao Início](#lista-das-aulas:)
+[Voltar ao Início](#lista-das-aulas)
+
+### Comentários no HTML
+
+[Voltar ao Início](#lista-das-aulas)
