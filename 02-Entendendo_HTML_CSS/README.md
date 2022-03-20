@@ -11,8 +11,8 @@
 7. [Cores no CSS](#7.-cores-no-css)]
 8. [Bordas no CSS](#bordas-no-css)
 9. [Margins e Padding no CSS](#margins-e-padding-no-css)
-10. [Width/height no CSS](#width/height-no-css)
-11. [Dicas sobre Width/Height](#dicas-sobre-width/height)
+10. [Width/height no CSS](#width-e-height-no-css)
+11. [Dicas sobre Width/Height](#dicas-sobre-width-e-height)
 12. [Links (1/2)](#links)
 13. [Links (2/2)](#links)
 14. [Formatação de textos no HTML](#formatação-de-textos-no-html)
@@ -245,11 +245,11 @@
 
 [Voltar ao Início](#lista-das-aulas)
 
-### Width/height no CSS
+### Width e height no CSS
 
 [Voltar ao Início](#lista-das-aulas)
 
-### Dicas sobre Width/Height
+### Dicas sobre Width e Height
 
 [Voltar ao Início](#lista-das-aulas)
 
