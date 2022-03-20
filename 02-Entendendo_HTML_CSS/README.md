@@ -7,7 +7,7 @@
 3. [Tags Básicas (2/2)](#tags-básicas)
 4. [O que é e como usar o CSS? (1/2)](#o-que-é-e-como-usar-o-css?)
 5. [O que é e como usar o CSS? (2/2)](#o-que-é-e-como-usar-o-css?)
-6. [A base geral do CSS](#6.-a-base-geral-do-cSS)
+6. [A base geral do CSS](#a-base-geral-do-cSS)
 7. [Cores no CSS](#7.-cores-no-css)]
 8. [Bordas no CSS](#bordas-no-css)
 9. [Margins e Padding no CSS](#margins-e-padding-no-css)
@@ -180,7 +180,7 @@
 
     [Voltar ao Início](#lista-das-aulas:)
 
-### 6. A base geral do CSS
+### A base geral do CSS
 
 - Base geral do CSS é adicionar estilos a objetos e elementos HTML, mas existem algumas formas mais utilizadas de selecionar o mesmo, ou elementos e objetos diferentes. Abaixo alguns exemplos:
 
