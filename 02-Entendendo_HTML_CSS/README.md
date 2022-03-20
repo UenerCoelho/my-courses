@@ -91,3 +91,5 @@
 ```
 
 ### 4. O que é e como usar o CSS?
+
+- CSS é um documento no qual o usuário não tem acesso normalmente, responsável por estilizar a pagina HTML.
