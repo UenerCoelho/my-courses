@@ -2,8 +2,7 @@
 
 ## Lista das Aulas:
 
-- 1. [O que é indentação?](#1.-O-que-é-indentação?)
-
+1. [O que é indentação?](#1.-O-que-é-indentação?)
 2. [Tags Básicas (1/2)](#Tags-Básicas)
 3. [Tags Básicas (2/2)](#Tags-Básicas)
 4. [O que é e como usar o CSS? (1/2)](#O-que-é-e-como-usar-o-CSS?)
