@@ -2,23 +2,24 @@
 
 ## Lista das Aulas:
 
-1. O que é indentação?
-2. Tags Básicas (1/2)
-3. Tags Básicas (2/2)
-4. O que é e como usar o CSS? (1/2)
-5. O que é e como usar o CSS? (2/2)
-6. A base geral do CSS
-7. Cores no CSS
-8. Bordas no CSS
-9. Margins e Padding no CSS
-10. Width/height no CSS
-11. Dicas sobre Width/Height
-12. Links (1/2)
-13. Links (2/2)
-14. Formatação de textos no HTML
-15. Comentários no HTML
+- 1. [O que é indentação?](#1.-O-que-é-indentação?)
 
-### 1. O que é indentação?
+2. [Tags Básicas (1/2)](#Tags-Básicas)
+3. [Tags Básicas (2/2)](#Tags-Básicas)
+4. [O que é e como usar o CSS? (1/2)](#O-que-é-e-como-usar-o-CSS?)
+5. [O que é e como usar o CSS? (2/2)](#O-que-é-e-como-usar-o-CSS?)
+6. [A base geral do CSS](#A-base-geral-do-CSS)
+7. [Cores no CSS](#7.-Cores-no-CSS)]
+8. [Bordas no CSS](#Bordas-no-CSS)
+9. [Margins e Padding no CSS](#Margins-e-Padding-no-CSS)
+10. [Width/height no CSS](#Width/height-no-CSS)
+11. [Dicas sobre Width/Height](#Dicas-sobre-Width/Height)
+12. [Links (1/2)](#Links)
+13. [Links (2/2)](#Links)
+14. [Formatação de textos no HTML](#Formatação-de-textos-no-HTML)
+15. [Comentários no HTML](#Comentários-no-HTML)
+
+### 1. O que é indentação? ([voltar ao Início](#Lista-das-Aulas:))
 
 - Consiste em diferenciar, com a tecla tabulação, para diferenciar as linhas e os escopos do código.
 
@@ -42,7 +43,7 @@
 </html>
 ```
 
-### 2. Tags Básicas
+### 2-3. Tags Básicas ([voltar ao Início](#Lista-das-Aulas:))
 
 ```html
 <!DOCTYPE html>
@@ -90,7 +91,7 @@
 </html>
 ```
 
-### 4. O que é e como usar o CSS?
+### 4-5. O que é e como usar o CSS? ([voltar ao Início](#Lista-das-Aulas:))
 
 - CSS é um documento no qual o usuário não tem acesso normalmente, responsável por estilizar a pagina HTML. Essa estilização é uma formatação do arquivo HTML, podemos trocar cores de fundo, adicionar imagens, cores das letras, tamanhos das boxes (div, section, nav, main, etc).
 
@@ -174,10 +175,69 @@
       }
       ```
 
-    ```
+### 6. A base geral do CSS ([voltar ao Início](#Lista-das-Aulas:))
 
-    ```
+- Base geral do CSS é adicionar estilos a objetos e elementos HTML, mas existem algumas formas mais utilizadas de selecionar o mesmo, ou elementos e objetos diferentes. Abaixo alguns exemplos:
 
-### 6. A base geral do CSS
+1. ex.:
+   ```css
+   h1 {
+     color: blue:
+   }
+   ```
 
--
+- para este exemplo, selecionamos o elemento "h1", entretanto se tiver mais de 1 elemento "h1", todos receberão a mesma estilização, caso não queiramos isso precisamos criar "id" para identificarmos quais elementos queremos modificar. Podemos ter vários "ids" no documento "html", mas, pelas boas práticas, só podemos criar um por elemento, entretanto, podemos criar "classes" e estas podem ser repetidas em vários elementos dentro do "html", mas pelas boas práticas, precisamos colocar em elementos do mesmo tipo. Como demonstrado no exemplo abaixo.
+
+2. ex.:
+
+- Para selecionarmos elementos, e estilizarmos eles de formar diferente, para elementos do mesmo tipo, precisamos criar "ids" no documento "html", como demonstrado abaixo
+
+```html
+<html>
+  <head>
+    <title>Título</title>
+  </head>
+  <body>
+    <main>
+      <section class="article">
+        <div class="box">
+          <!-- Aqui criamos um id com o nome de "título1" e uma classe "titulo", mas a "classe" foi repetida abaixo o "id" não -->
+          <h1 class="titulo" id="título1">Título 01</h1>
+          <p>Loren ipsum, lorem ipsum, etc</p>
+        </div>
+      </section>
+      <section class="article">
+        <div class="box">
+          <h1 class="titulo" id="título2">Título 02</h1>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+```
+
+- Aqui selecionamos o "id" e inserimos uma estilização para o mesmo
+
+```css
+#titulo1 {
+  color: green;
+}
+```
+
+- Para tanto, devemos lembrar das boas práticas, e termos cuidado para não utilizarmos palavras reservadas, refente a sintaxe do "html" e "css". As boas práticas consiste em seguir uma semântica na digitação do código, para que o próximos profissional que for trabalhar numa, possível refatoração, possam entender, por isso, devemos nomear as "ids", "classes" em inglês e que faça ao menos uma referencia do que se propõe.
+
+### 7. Cores no CSS ([voltar ao Início](#Lista-das-Aulas:))
+
+### 8. Bordas no CSS ([voltar ao Início](#Lista-das-Aulas:))
+
+### 9. Margins e Padding no CSS ([voltar ao Início](#Lista-das-Aulas:))
+
+### 10. Width/height no CSS ([voltar ao Início](#Lista-das-Aulas:))
+
+### 11. Dicas sobre Width/Height ([voltar ao Início](#Lista-das-Aulas:))
+
+### 12. Links ([voltar ao Início](#Lista-das-Aulas:))
+
+### 14. Formatação de textos no HTML ([voltar ao Início](#Lista-das-Aulas:))
+
+### 15. Comentários no HTML ([voltar ao Início](#Lista-das-Aulas:))
