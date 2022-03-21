@@ -204,14 +204,18 @@
   </head>
   <body>
     <main>
+      <!-- Definição da "class" -->
       <section class="article">
+        <!-- Definição da "class" -->
         <div class="box">
           <!-- Aqui criamos um id com o nome de "título1" e uma classe "titulo", mas a "classe" foi repetida abaixo o "id" não -->
           <h1 class="titulo" id="título1">Título 01</h1>
           <p>Loren ipsum, lorem ipsum, etc</p>
         </div>
       </section>
+      <!-- Definição da "class" -->
       <section class="article">
+        <!-- Definição da "class" -->
         <div class="box">
           <h1 class="titulo" id="título2">Título 02</h1>
         </div>
@@ -221,11 +225,20 @@
 </html>
 ```
 
-- Aqui selecionamos o "id" e inserimos uma estilização para o mesmo
+- No exemplo abaixo selecionamos o "id" e as "classes", para inserimos uma estilização para o mesmo
 
 ```css
 #titulo1 {
   color: green;
+}
+.titulo {
+  font-size: 16px;
+}
+.article {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  padding: 0 20px;
 }
 ```
 
@@ -234,6 +247,47 @@
 [Voltar ao Início](#lista-das-aulas)
 
 ### Cores no CSS
+
+- Existem 4 formas de se inserir cor no "html" pelo "css", entretanto somente 2 são mais utilizadas. Neste documento trataremos de 3.
+
+- Exemplos método 1:
+  - Neste método nó declaramos a cor através do nome dela, porém é uma forma muito limitada, pois na memória do "html" só existe 140 "nomes" de cores:
+  ```css
+  #container {
+    background-color: blue;
+  }
+  ```
+- Exemplos método 2:
+
+  - Neste método nó declaramos a cor através do código "RGB" dela, já esta maneira possui uma gama muito maior de cor, podendo ir de 0 a 255, neste caso teremos 3 cores de base Vermelho ((R)ed), Verde ((G)reen) e Azul ((B)lue), cada uma pode ir de 0 a 255, e assim inserimos uma cor de acordo com os valores q colocamos:
+
+  ```css
+  #container {
+    background-color: rgb(255, 0, 0);
+  }
+  .titulo {
+    background-color: rgb(0, 255, 0);
+  }
+  div {
+    color: rgb(0, 0, 255);
+  }
+  ```
+
+- Exemplos método 3:
+
+  - Neste método nó declaramos a cor através do código hexadecimal dela. código hexadecimal é formado por sustenido "#" seguido de 6 caracteres. Ex.: #AF10E9, esses caracteres vão de 0 a 9 e de "A" a "F", suas conbinações formam as mais diversas cores. Esses caracteres são divididos em 3 grupos de 2 cada, sendo o primeiro seguindo tons de vermelho (Red) so segundo de Verde (Green) e o terceiro de Azul (Blue), seguindo o mesmo padrão do exemplo anterior, o padrão RGB. Também podemos simplificar utilizando apenas 3 caracteres (#1CA), mesmo ainda teremos 3 grupos, de um carácter cada, sendo o primeiro red, o segundo green e o terceiro blue. També devemos salientar que "0" é o valor mínimo e "F" o valor máximo.
+
+  ```css
+  #container {
+    background-color: #ff0000;
+  }
+  .titulo {
+    background-color: #00ff00;
+  }
+  div {
+    color: #0000ff;
+  }
+  ```
 
 [Voltar ao Início](#lista-das-aulas)
 
