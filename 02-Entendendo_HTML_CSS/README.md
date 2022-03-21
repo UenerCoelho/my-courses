@@ -293,6 +293,53 @@
 
 ### Bordas no CSS
 
+- As bordas podem ser inseridas tanto documento "html" como um todo, ou por elemento, e até mesmos bordas diferentes para cada elemento.
+
+- Exemplo de bordas:
+
+```css
+/* Borda inserida na pagina "html" toda */
+body {
+  border: 1px solid green;
+  /* Arredondamento da  borda */
+  border-radius: 8px;
+}
+/* borda inserida apenas em uma div */
+div {
+  border: 2px solid #000;
+}
+/* borda inserida em um classe */
+.container {
+  border: 3px solid rgb(123, 40, 89);
+}
+/* borda no topo */
+p {
+  border-top: 1px solid black;
+}
+/* borda a direita */
+h1 {
+  border-right: 1px solid gray;
+}
+/* Borda no botão */
+nav {
+  border-bottom: 1px solid #01d2f4;
+}
+/* Borda a esquerda */
+main {
+  border-left: 1px solid rgb(201, 89, 155);
+}
+/* criando uma bola com bordas */
+div {
+  background-color: #777;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 3px solid darkgreen;
+}
+```
+
+- Existem tipos de borda, "solid" como o nome diz é uma linha sólida, "dotted", que como o próprio nome também diz, é uma borda pontilhada, a "dashed" que é uma borda com traços, "double" uma muito pouco utilizada, mas é uma borda de linha dupla, "groove" que é a "solid" mais grossa, enfim, mas as mais utilizadas são a "solid" "dashed" e "dotted".
+
 [Voltar ao Início](#lista-das-aulas:)
 
 ### Margins e Padding no CSS
