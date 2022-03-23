@@ -344,6 +344,52 @@ div {
 
 ### Margins e Padding no CSS
 
+- Margin, como o próprio nome já diz, é a margem (espaçamento externos) dos elementos e do documento como um todo, cada tag ("div", "nav", "p", "h1", etc), possui margin, podemos, através do CSS altera-la, para mais ou menos.
+- Padding é um margem interna do elemento, que possui o mesmo sentido da "margin", podemos altera-lo para mais ou menos da mesma maneira, e todo o documento e seus elementos (tags) possuem padding, assim como margin.
+- Todo elemento e até mesmo o documento geral, possui os 2, "margin" e "padding", por padrão.
+
+- exemplos de como alterá-los:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo</title>
+  </head>
+  <body>
+    <main>
+      <h1>Modelo de Estrutura HTML</h1>
+      <nav></nav>
+      <section>
+        <!-- criamos uma class container abaixo -->
+        <div class="container"></div>
+      </section>
+      <footer>
+        <div></div>
+      </footer>
+    </main>
+  </body>
+</html>
+```
+
+- Imagine que acima criamos um documento "html" e nele criamos uma tag "div" e inserimos uma "class" de nome "container", agora vamos estilizar o margin e o padding dele abaixo:
+
+```css
+.container {
+  /* todo margin possui 4 lados, cima, direita, baixo e esquerda. No exemplo abaixo setamos 10px em cima, 20px pra direita, 30px para baixo e 40px para esquerda, sempre seguirá o sentido horário, a começar pelo top (cima) do elemento/pagina */
+  margin: 10px 20px 30px 40px;
+  /* Agora quando colocamos dessa forma, marcamos os pares, cima e baixo com 10px e direita e esquerda com 20px */
+  margin: 10px 20px;
+  /* todo padding possui 4 lados, cima, direita, baixo e esquerda. No exemplo abaixo setamos 10px em cima, 20px pra direita, 30px para baixo e 40px para esquerda, sempre seguirá o sentido horário, a começar pelo top (cima) do elemento/pagina */
+  padding: 10px 20px 30px 40px;
+  /* Agora quando colocamos dessa forma, marcamos os pares, cima e baixo com 10px e direita e esquerda com 20px */
+  padding: 10px 20px;
+}
+```
+
 [Voltar ao Início](#lista-das-aulas)
 
 ### Width e height no CSS
