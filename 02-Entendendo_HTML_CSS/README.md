@@ -394,11 +394,27 @@ div {
 
 ### Width e height no CSS
 
-- Width e Height no CSS
+- Width (Largura) e Height (Altura) no CSS, todo elemento no html possui largura e altura, podemos modificar largura e altura de quaisquer elementos, inclusive de forma separada para cada elemento, na verdade é assim que poderemos criar diversos tipos (layouts) de site e aplicativos, também podemos utilizar vários tipos de medidas como pixels, rem, etc. Para inserirmos utilizamos o exemplo abaixo.
+
+```css
+div {
+  width: auto;
+  height: 300xp;
+}
+/* A medida "rem" é uma medida para responsividade, com base no pixel, pois 1 rem = 16px por padrões do "user agent" */
+body {
+  width: 100%;
+  height: 300rem;
+}
+```
 
 [Voltar ao Início](#lista-das-aulas)
 
 ### Dicas sobre Width e Height
+
+- Quando definimos uma largura e/ou altura, estas propriedades são referentes ao tamanho total do elemento, incluindo o padding, pois é um espaçamento interno do elemento, ou seja um elemento com 400px, 10px de padding e mais uma borda de 5px, vai se tornar uma "div" com 430px, pois os valores se somarão a "div". Por isso, nós devemos, pelas boas práticas, inserir um box-sizing para cada caso específico, para este casa podemos inserir o "box-sizing: border-box;", isso fará o elemento principal se funda com os adicionais, assim uma "div" de 400px com um padding de 10px e margin de 5px, deduzirá os valores do margin padding para ficarem, se por assim dizer, dentro da "div" principal, assim a "div" terá 400px, na verdade esse valor será 370px da "div" mais 10px (de cada lado) do padding e 5px (de cada lado) da borda.
+
+- Também é costume utilizar "box-sizing: content-box;", pois assim dizemos que o tamanho do elemento é referente ao seu conteúdo.
 
 [Voltar ao Início](#lista-das-aulas)
 
