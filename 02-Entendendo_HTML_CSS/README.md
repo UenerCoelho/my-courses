@@ -420,6 +420,38 @@ body {
 
 ### Links
 
+- Os links, no documento "html", é adicionado pela tag "a", uma acrônimo da palavra Anchor (ancora no inglês). Links podem ser utilizados para colocarmos um link de outro site no meu html, mas também podemos utilizá-lo para mandarmos para páginas diferentes do meu site o até mesmos para artigos diferentes na mesma página.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <!-- Link utilizando a tag "a" para um site-->
+        <a href="www.google.com">Site do google</a>
+        <!-- Link direcionado para outra página no mesmo site -->
+        <a href="../assets/public/page.html" target="_blank">Sobre</a>
+        <!-- Link enviando para um local diferente na mesma página -->
+        <a href="#footer">Ir para Footer</a>
+      </nav>
+      <section>
+        <div></div>
+      </section>
+      <footer>
+        <div id="footer"></div>
+      </footer>
+    </main>
+  </body>
+</html>
+```
+
 [Voltar ao Início](#lista-das-aulas)
 
 ### Formatação de textos no HTML
