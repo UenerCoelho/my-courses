@@ -456,8 +456,39 @@ body {
 
 ### Formatação de textos no HTML
 
+- Na formatação de texto no "HTML" podemos fazer quase tudo que um texto padrão dos editores de texto mais comuns, como "Word" da "Microsoft", como por exemplo, negrito, itálico, sublinhado, justificado, centralizado alinha a direita e esquerda, tamanho da letra, cor, fonte, etc. No caso do negrito temos 2 formas de deixar parte ou todo o texto em negrito com a tag "b" ou com a tag "strong", no entanto, é recomendável utilizarmos a tag "strong", por questão de boas práticas e acessibilidade, pois quando a utilizamos o navegador interpreta e traduz o texto marcado por "strong" com a sensação de importância, assim os leitores de texto para deficientes auditivos, podem destacar o texto negritado.
+- No caso do itálico temos, também 2 tags "i" e "em", e no caso do "strong" ele é tratado assim, pelas boas práticas, por conter semântica. E também temos a tag "i" e "em" para deixar o texto no modo itálico, e a tag "em" tem o mesmo sentido que a tag "strong", por possuir semântica.
+- Temos uma tag "small" para deixarmos o texto selecionado menor.
+- Temos a tag "del" para marcamos no texto, partes que foram deletadas, deixando as palavras com um risco no meio.
+- Temos a Tag "mark" para marcarmos o texto, deixando o texto marcado com uma marca amarela, por padrão.
+- Temos a tag "sup" pra colocarmos o simbolo de primeiro num número.
+- Temos a tag "sub" que faz o inverso da tag "sup"
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo</title>
+  </head>
+  <body>
+    <main>
+      <p> <b>Lorem Ipsum</b> is <i>simply</i> dummy text of the printing <sub>a</sub>nd <em>typesetting</em> industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 1<sup>o</sup> printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five <mark>centuries</mark>, but also the leap into electronic typesetting, <small>remaining essentially unchanged</small>. It was <strong>popularised</strong> in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of <del>Lorem Ipsum</del>.
+  </body>
+</html>
+
+```
+
 [Voltar ao Início](#lista-das-aulas)
 
 ### Comentários no HTML
+
+- Exemplo de cometário no "HTML":
+
+```html
+<!-- esta campo é um comentário -->
+```
 
 [Voltar ao Início](#lista-das-aulas)
