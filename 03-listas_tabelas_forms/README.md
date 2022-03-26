@@ -1,6 +1,6 @@
 # Módulo 3: Listas, Tabelas e Formulários
 
-- Conteúdo do Módulo:
+## Conteúdo do Módulo
 
 1. [Formatação de textos no CSS 1](#formatação-de-textos-no-CSS-1)
 2. [Formatação de textos no CSS 2](#formatação-de-textos-no-CSS-2)
@@ -25,40 +25,80 @@
 
 ## Formatação de textos no CSS 1
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Formatação de textos no CSS 2
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Adicionando Fontes Externas
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Listas no HTML
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Tabelas no HTML
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Tabelas no CSS
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Formulários
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Input
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Inputs no HTML5
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Select
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Textarea
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Button
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Label
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Formatando formulários no CSS 1
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Formatando formulários no CSS 2
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Tags Fieldset e Legend
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Validações Nativas 1
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Validações Nativas 2
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
 
 ## Input type hidden
 
+[Voltar ao Início](#Conteúdo-do-Módulo)
+
 ## Input type file
+
+[Voltar ao Início](#Conteúdo-do-Módulo)
