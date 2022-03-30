@@ -26,6 +26,8 @@
 ## Formatação de textos no CSS 1
 
 - Formatando textos através do CSS
+- Formatando textos através do CSS
+- Formatando textos através do CSS
 
 [Voltar ao Início](#Conteúdo-do-Módulo)
 
