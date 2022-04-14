@@ -64,6 +64,5 @@
   - Também podemos apagar as propriedades
 
     ```js
-      delete person.age; //Deleta o campo age.
+      delete person.age; //Deleta a propriedade age.
     ```
-  
