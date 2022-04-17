@@ -98,13 +98,13 @@
           console.log(helloWorld()()); // 'Hello World!'
       ```
   2. Por meio de Objetos.
-    * Utilizando um função como método, declarada dentro do objeto. No JavaScript não existem métodos, mas podemos simular a existencia deles, um método é um objeto, objetos é uma combinação dinâmica de chaves e valores, e que podem ser invocados dando a impressão de ser um método.
+    * Utilizando um função como método, declarada dentro do objeto. No JavaScript não existem métodos, mas podemos simular a existência deles, um método é um objeto, objetos é uma combinação dinâmica de chaves e valores, e que podem ser invocados dando a impressão de ser um método.
     ```js
         var person = {
           name: 'João',
           age: 20,
           getAge: function() {
-            return this.age; // Aqui a função nãtem 'this.', mas a passa a ter por ser executada a partir de um objeto. Este 'this.' refere-se ao escopo do qual eu estou invocando a função.
+            return this.age; // Aqui a função não tem 'this.', mas a passa a ter por ser executada a partir de um objeto. Este 'this.' referencia ao Objeto.
           }
         };
 
@@ -128,7 +128,12 @@
         console.log(person.getAge()); // 20
     ```
   3. Por meio dos Operadores "Call" e "Apply".
-    * O Operador "Call", como o nome ja diz, ele chama a função, então podemos passar o escopo para a chamada. E o "Apply" aplica.
+    * Toda função possui os métodos "call()" e "apply()". Eles são utilizados para indicar em qual escopo um função deve ser executada. O Operador "Call", como o nome ja diz, ele chama a função, então podemos passar o escopo para a chamada. E o "Apply" aplica.
+    ```js
+        // Adiferença é basicamente a forma como é utilizado?
+        função.call(escopo, parametro1, parametro2);
+        função.apply(escopo, [parametros]);
+    ```
     ```js
         var getAge = function(extra) {
           return this.age + extra;
@@ -157,11 +162,11 @@
         console.log(createPerson('Pedro', 20)) // { name: 'Pedro', age: 20 }
         console.log(createPerson('Maria', 30)) // { name: 'Pedro', age: 20 }
     ```
-    * Criando Objeto através da função Construtora. Na convensão de boas práticas do JavaScript, diz-se que devemos criar nomes de variáveis inciando com letra minúscula, mas para as funções construtoras devemos criá-las iniciando com letra Maiúscula, para saber diferenciá-las.
+    * Criando Objeto através da função Construtora. Na convenção de boas práticas do JavaScript, diz-se que devemos criar nomes de variáveis inciando com letra minúscula, mas para as funções construtoras devemos criá-las iniciando com letra Maiúscula, para saber diferenciá-las e lembrarmos de utilizar o operador 'new'.
     ```js
         var CreatePerson = function(name, age) {
           this.name = nome;
-          this.age = age; // O 'this.' ele refencia o objeto que será criado por meio do operador new
+          this.age = age; // O 'this.' ele referencia o objeto que será criado por meio do operador 'new'
         };
 
         console.log(new person('Pedro', 20)) // { name: 'João', age: 35 } não esquecer do operador 'new'.
