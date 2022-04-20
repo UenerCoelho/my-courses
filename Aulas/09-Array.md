@@ -116,8 +116,57 @@
   ```
 
 - forEach:
-  ```js
-  car.forEach(function (elemento) {
-    console.log(elemento)
-  })
+    ```js
+    car.forEach(function (element) {
+      console.log(element)
+    })
+
+    /* Resultado, mas sairá direto no terminal, sem estar comentado
+    Ka
+    Corsa
+    Sonic
+    Pálio
+    */
+
+    // For convencional
+
+    for(var i=0; i< car.length; i++) {
+      console.log(car[i]);
+    }
+    /* Resultado idêntico, mas sairá direto no terminal, sem estar comentado
+    Ka
+    Corsa
+    Sonic
+    Pálio
+    */
   ```
+- filter:
+    ```js
+    var car = [];
+
+      car[0] = {brand: 'Ford', model: 'Ka'};
+      car[1] = {brand: 'Chevrolet', model: 'Corsa'};
+      car[2] = {brand: 'Fiat', model: 'Pálio'};
+      car[3] = {brand: 'Volkswagem', model: 'Gol'};
+
+      car.filter(function (element) {
+        return element.brand === 'Ford';
+      });
+
+      // [{ brand: 'Ford', model: 'Ka' }]
+
+      // Usando o forEach
+      var carFord = [];
+      car.forEach(function(element) {
+        if (element.brand === 'Ford')  carFor.push(element);
+      });
+
+      console.log(carFord); // [ { brand: 'Ford', model: 'Ka' }]
+
+      // outra maneira, mais elegante =]
+      var carFord = car.filter(function(element) {
+        return element.brand === 'Ford';
+      });
+
+      console.log(carFord); // [ { brand: 'Ford', model: 'Ka' }]
+    ```
