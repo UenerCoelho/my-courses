@@ -64,13 +64,11 @@
 
   car // [ 'Ka', 'Corsa', 'Pálio' ]
   ```
-
 - toString:
 
   ```js
   car.toString() // 'Ka,Corsa,Pálio'
   ```
-
 - length:
 
   ```js
@@ -78,7 +76,6 @@
 
   car // [ 'Ka', 'Corsa', 'Pálio']
   ```
-
 - push:
   ```js
   car.push('Gol') // 4
@@ -114,7 +111,6 @@
   car.splice(1, 0, 'Corsa') // [ ]
   car // [ 'Ka', 'Corsa', 'Sonic', 'Palio' ]
   ```
-
 - forEach:
     ```js
     car.forEach(function (element) {
@@ -139,6 +135,23 @@
     Sonic
     Pálio
     */
+
+    // Somando preço com forEach
+    var car = [];
+
+      car[0] = {brand: 'Ford', price: 14000};
+      car[1] = {brand: 'Chevrolet', price: 15000};
+      car[2] = {brand: 'Fiat', price: 16000};
+      car[3] = {brand: 'Volkswagem', price: 17000};
+    
+    var total = 0;
+
+    car.forEach(function(element) {
+      total += element.price;
+    });
+
+    console.log(total); // 62000
+
   ```
 - filter:
     ```js
@@ -170,3 +183,124 @@
 
       console.log(carFord); // [ { brand: 'Ford', model: 'Ka' }]
     ```
+- every e some:
+    ```js
+      car.every(function(elements) {
+        return elements.brand === 'Ford';
+      });
+
+      false // Retorno da função
+
+      car.some(function(element) {
+        return element.brand === 'Ford';
+      });
+
+      true // Retorno da função
+    ```
+- map:
+    ```js
+    car.map(function(element) {
+      return element.brand;
+    });
+
+    [ 'Ford', 'Chevrolet', 'Fiat', 'Volkswagem' ] // Retorno da função
+
+    // Agora vou pedir o retorna da quantidade de string do array, referente ao modelo
+    car.map(function(element) {
+      return element.model.length;
+    });
+
+    [ 2, 5, 5, 10 ] // Retorno da função
+    ```
+- reduce:
+    ```js
+      var car = [];
+
+        car[0] = {brand: 'Ford', price: 14000};
+        car[1] = {brand: 'Chevrolet', price: 15000};
+        car[2] = {brand: 'Fiat', price: 16000};
+        car[3] = {brand: 'Volkswagem', price: 17000};
+    
+      var total = 0;
+
+      car.reduce(function(prev, cur) { // prev = previous(anterior) cur = current(atual)
+        return prev + cur.price;
+      }, 0);
+
+      62000 // Retorno da função
+    ```
+- concat:
+  * concat não muda o estado inicial do array, mas gera um novo array.
+  ```js
+    var car = [ 'Ka', 'Corsa', 'Pálio' ];
+    var motorcycle = [ 'Honda', 'Yamaha' ];
+
+    var veicules = car.concat(motos);
+
+    veicules.toString; 
+    [ 'Ka', 'Corsa', 'Pálio', 'Honda', 'Yamaha' ]; //Retorno da função
+  ```
+- slice:
+  * slice não altera o array original
+  ```js
+    var car = [ 'Ka', 'Corsa', 'Pálio', 'Gol' ];
+
+    car.slice(0,2); // [ 'Ka', 'Corsa' ]
+    car.slice(1,3); // [ 'Corsa', 'Gol' ]
+    car.slice(2); // [ 'Pálio', 'Gol' ]
+  ```
+- reverse:
+  * não altera o array original
+  ```js
+    var car.reverse(); // A primeira vez inverte a ordem do array
+
+    [ 'Gol', 'Pálio', 'Corsa', 'Ka' ] // Retorno do primeiro reverse
+
+    var car.reverse(); // A Segunda vez inverte a ordem do primeiro reverse pra o original
+
+    [ 'Ka', 'Corsa', 'Pálio', 'Gol' ] // Retorno do segundo reverse
+  ```
+- sort:
+  ```js
+    car.sort(); // se fizermos sem nenhuma especificação ele vai mostrar o array normal
+    [ 'Ka', 'Corsa', 'Pálio', 'Gol' ] // Retorno do sort normal
+
+    var car = [];
+
+      car[0] = {brand: 'Ford', price: 14000};
+      car[1] = {brand: 'Chevrolet', price: 15000};
+      car[2] = {brand: 'Fiat', price: 16000};
+      car[3] = {brand: 'Volkswagem', price: 17000};
+
+      /* 
+        neste exemplo, passamos uma função de comparação que receberá 2 parâmetros 'a' e 'b', sendo a o primeiro e b o segundo, essa função deverá retornar um número negativo, zero ou um número positivo, sendo que, se for um número negativo, 'a' deverá vir em primeiro e 'b' em segundo, se for zero permanece inalterado, mas se for positivo, 'b' deverá assumir a primeira posição.
+      */
+      car.sort(function (a, b) {
+        return a.price - b.price;
+      });
+
+      // Retorno da função em ordem acendente
+      [
+        { brand: 'Ford', price: 14000 },
+        { brand: 'Chevrolet', price: 15000 },
+        { brand: 'Fiat', price: 16000 },
+        { brand: 'Volkswagem', price: 17000 }
+      ]
+
+      car.sort(function (a, b) {
+        return b.price - a.price;
+      });
+
+      // Retorno da função descendente
+      [
+        { brand: 'Volkswagem', price: 17000 },
+        { brand: 'Fiat', price: 16000 },
+        { brand: 'Chevrolet', price: 15000 },
+        { brand: 'Ford', price: 14000 }
+      ]
+  ```
+- join:
+  * o 'join' junta as partes do array com base num separador definido previamente. Ele sempre retornará um String separando o conteúdo pelo separador pré definido.
+    ```js
+      car.join(';');
+      "Ka;Corsa;Pálio;Gol" // Retorno da função join
