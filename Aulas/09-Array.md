@@ -304,3 +304,4 @@
     ```js
       car.join(';');
       "Ka;Corsa;Pálio;Gol" // Retorno da função join
+    ```
