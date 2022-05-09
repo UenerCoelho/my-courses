@@ -1,5 +1,5 @@
 # Mini Curso de JavaScript by @rodrigobranas
-- Assisti a este mini curso e resolvi documentar meu aprendizado, com intuito de fixação do mesmo e ter um facil acesso, as minhas anotações, de qualquer lugar, através do @github.
+- Assisti a este mini curso e resolvi documentar meu aprendizado, com intuito de fixação do mesmo e ter um fácil acesso, as minhas anotações, de qualquer lugar, através do @github.
 - A origem deste conteúdo pode ser encontrado no YouTube no [Canal do Rodrigo Branas](#https://www.youtube.com/watch?v=093dIOCNeIc&list=PLQCmSnNFVYnT1-oeDOSBnt164802rkegc)
 
 ### Lista das Aulas
