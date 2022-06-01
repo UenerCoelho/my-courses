@@ -6,4 +6,4 @@ const multiplicação = a * b;
 const divisão = d / a;
 const modulo = a % 2;
 
-console.log(soma, subtração, multiplicação, divisão, modulo)
+console.log(soma, subtração, multiplicação, divisão, modulo);
