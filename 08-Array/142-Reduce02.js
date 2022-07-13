@@ -9,6 +9,6 @@ const alunos = [
 const todosBolsistas = (resultado, bolsista) => resultado && bolsista;
 console.log(alunos.map(a => a.bolsista).reduce(todosBolsistas));
 
-// Desafio 2: Testar se ao menos 1 é bolsista
+// Desafio 2: Testar se ao menos um é bolsista
 const algumBolsista = (resultado, bolsista) => resultado || bolsista;
 console.log(alunos.map(a => a.bolsista).reduce(algumBolsista));
