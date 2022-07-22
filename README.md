@@ -42,7 +42,8 @@
   * Seção 17 - Gulp
   * Seção 38 - Gulp - Versão 3
   * Seção 18 - Webpack
-  Para consolidar conhecimento: Seção 20: Projeto galeria (bootstrap/JQuery/Webpack)
+  Para consolidar conhecimento:
+  * Seção 20: Projeto galeria (bootstrap/JQuery/Webpack)
 
 ## BANCO DE DADOS E EXPRESS
 
