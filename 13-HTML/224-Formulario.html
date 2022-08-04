@@ -1,5 +1,5 @@
 <h1>Formulário</h1>
-<form action="http://localhost:3003/usuarios" method="POST">
+<form method="POST">
   <input type="text" name="nome">
   <input type="password" name="password">
   <textarea name="bio" cols="30" rows="10"></textarea>
@@ -29,7 +29,9 @@
     <option value="c#">C Sharp</option>
     <option value="py">Python</option>
   </select>
-  <button>Incluir</button>
+  <input type="hidden" id="3">
+  <button formaction="http://localhost:3003/usuarios">Incluir</button>
+  <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
 </form>
 <style>
   input, textarea, select {
