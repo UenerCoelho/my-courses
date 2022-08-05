@@ -1,3 +1,6 @@
+body {
+  background-color: #bbb;
+}
 .circular {
   width: 513px;
   background-color: #444;
@@ -18,4 +21,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 200%;
+}
+
+p {
+  position: absolute;
+  display: none;
 }
