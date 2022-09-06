@@ -5,32 +5,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lógica em JS - Rodrigo Branas</title>
+  <style>
+    body {
+      background-color: #333;
+    }
+  </style>
 </head>
 <body>
   
   <script>
     // janeiro
-    salario = 3000
-    aluguel = 1000
-    contaDeLuz = 200
-    contaDeAgua = 100
-    internet = 100
-    transporte = 300
-    lazer = 300
-    alimentacao = 500
-    console.log(salario - aluguel - contaDeAgua - contaDeLuz - internet - transporte - lazer - alimentacao)
+    salario1 = 3000
+    aluguel1 = 1000
+    contaDeLuz1 = 200
+    contaDeAgua1 = 100
+    internet1 = 100
+    transporte1 = 300
+    lazer1 = 300
+    alimentacao1 = 500
+    saldo1 = salario1 - aluguel1 - contaDeAgua1 - contaDeLuz1 - internet1 - transporte1 - lazer1 - alimentacao1;
+    console.log("Janeiro");
+    console.log(saldo1);
+    estaNegativo1 = saldo1 < 0
+    if (estaNegativo1) {
+      console.log("em janeiro está negativo");
+    } else {
+      console.log("em janeiro está positivo");
+    }
 
     // fevereiro
-    salario = 3000
-    aluguel = 1200
-    contaDeLuz = 250
-    contaDeAgua = 100
-    internet = 100
-    transporte = 500
-    lazer = 0
-    alimentacao = 1000
-    console.log(salario - aluguel - contaDeAgua - contaDeLuz - internet - transporte - lazer - alimentacao)
-    
+    salario2 = 3000
+    aluguel2 = 1200
+    contaDeLuz2 = 250
+    contaDeAgua2 = 100
+    internet2 = 100
+    transporte2 = 500
+    lazer2 = 0
+    alimentacao2 = 1000
+    saldo2 = salario2 - aluguel2 - contaDeAgua2 - contaDeLuz2 - internet2 - transporte2 - lazer2 - alimentacao2;
+    console.log("Fevereiro");
+    console.log(saldo2);
+    console.log("Ano");
+    console.log(saldo = saldo1 + saldo2);
+    estaNegativo2 = saldo2 < 0
+    if (estaNegativo2) {
+      console.log("em janeiro está negativo");
+    } else {
+      console.log("em janeiro está positivo");
+    }
   </script>
 </body>
 </html>
