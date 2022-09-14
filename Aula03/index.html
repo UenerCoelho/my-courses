@@ -14,11 +14,13 @@
 <body>
   
   <script>
-    function arredondar(valor){
+    // Inicio
+
+    function arredondar (valor) {
       return Math.round(valor * 100)/100
     }
 
-    function calcularJuros (valor){
+    function calcularJuros (valor) {
       juros = arredondar(valor * 0.1)
       console.log(juros)
       return juros
@@ -30,9 +32,17 @@
       return rendimentos
     }
 
-    function calcularSaldo (mes, saldoInicial, salario, aluguel, contaDeAgua, contaDeLuz, internet, transporte, lazer, alimentacao) {
+    function calcularSaldo (mes, saldoInicial, lancamentos) {
       console.log(mes)
-      saldo = saldoInicial + salario - aluguel - contaDeAgua - contaDeLuz - internet - transporte - lazer - alimentacao
+      saldo = saldoInicial
+      for (lancamento of lancamentos) {
+        if (lancamento.tipo === 'receita') {
+          saldo += lancamento.valor
+        }
+        if (lancamento.tipo === 'despesa') {
+          saldo -= lancamento.valor
+        }
+      }
       estaNegativo = saldo < 0
         if (estaNegativo) {
           juros = calcularJuros(saldo)
@@ -44,37 +54,51 @@
         return saldo
     }
 
-    salario1 = 3000
-    aluguel1 = 1000
-    contaDeLuz1 = 200
-    contaDeAgua1 = 100
-    internet1 = 100
-    transporte1 = 300
-    lazer1 = 300
-    alimentacao1 = 500
-    saldo1 = calcularSaldo('Janeiro ', 0, salario1, aluguel1, contaDeAgua1, contaDeLuz1, internet1, transporte1, lazer1, alimentacao1)
+    saldoInicial = 0
+
+    lancamentosJaneiro = [
+      { categoria: "Salario", tipo: "receita", valor: 3000 },
+      { categoria: "Aluguel", tipo: "despesa", valor: 1000 },
+      { categoria: "Conta de Luz", tipo: "despesa", valor: 200 },
+      { categoria: "Conta de Água", tipo: "despesa", valor: 100 },
+      { categoria: "Internet", tipo: "despesa", valor: 100 },
+      { categoria: "Transporte", tipo: "despesa", valor: 300 },
+      { categoria: "Lazer", tipo: "despesa", valor: 300 },
+      { categoria: "Alimentação", tipo: "despesa", valor: 500 },
+      { categoria: "Condomínio", tipo: "despesa", valor: 300 },
+      { categoria: "Farmácia", tipo: "despesa", valor: 100 }
+    ]
+    saldo1 = calcularSaldo('Janeiro ', saldoInicial, lancamentosJaneiro)
     console.log(saldo1)
 
-    salario2 = 3000
-    aluguel2 = 1200
-    contaDeAgua2 = 100
-    contaDeLuz2 = 250
-    internet2 = 100
-    transporte2 = 500
-    lazer2 = 0
-    alimentacao2 = 1000
-    saldo2 = calcularSaldo('Fevereiro ', saldo1, salario2, aluguel2, contaDeAgua2, contaDeLuz2, internet2, transporte2, lazer2, alimentacao2)
+    LancamentosFevereiro = [
+      { categoria: "Salario", tipo: "receita", valor: 3000 }, 
+      { categoria: "Aluguel", tipo: "despesa", valor: 1200 }, 
+      { categoria: "Conta de Luz", tipo: "despesa", valor: 250 }, 
+      { categoria: "Conta de Água", tipo: "despesa", valor: 100 }, 
+      { categoria: "Internet", tipo: "despesa", valor: 100 }, 
+      { categoria: "Transporte", tipo: "despesa", valor: 500 }, 
+      { categoria: "Lazer", tipo: "despesa", valor: 0 }, 
+      { categoria: "Alimentação", tipo: "despesa", valor: 1000 },
+      { categoria: "Condomínio", tipo: "despesa", valor: 400 },
+      { categoria: "Farmácia", tipo: "despesa", valor: 0 }
+    ]
+    saldo2 = calcularSaldo('Fevereiro ', saldo1, LancamentosFevereiro)
     console.log(saldo2)
 
-    salario3 = 4000
-    aluguel3 = 1200
-    contaDeLuz3 = 200
-    contaDeAgua3 = 100
-    internet3 = 200
-    transporte3 = 500
-    lazer3 = 800
-    alimentacao3 = 1000
-    saldo3 = calcularSaldo('Março ', saldo2, salario3, aluguel3, contaDeAgua3, contaDeLuz3, internet3, transporte3, lazer3, alimentacao3)
+    lacamentosMarco = [
+      { categoria: "Salario", tipo: "receita", valor: 4000 }, 
+      { categoria: "Aluguel", tipo: "despesa", valor: 1200 }, 
+      { categoria: "Conta de Luz", tipo: "despesa", valor: 200 }, 
+      { categoria: "Conta de Água", tipo: "despesa", valor: 100 }, 
+      { categoria: "Internet", tipo: "despesa", valor: 200 }, 
+      { categoria: "Transporte", tipo: "despesa", valor: 500 }, 
+      { categoria: "Lazer", tipo: "despesa", valor: 800 }, 
+      { categoria: "Alimentação", tipo: "despesa", valor: 1000 }, 
+      { categoria: "Condomínio", tipo: "despesa", valor: 400 },
+      { categoria: "Farmácia", tipo: "despesa", valor: 0}
+    ]
+    saldo3 = calcularSaldo('Março ', saldo2, lacamentosMarco)
     console.log(saldo3)
     console.log("Ano");
     console.log(saldo3);
