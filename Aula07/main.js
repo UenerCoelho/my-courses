@@ -66,16 +66,24 @@ const saldoInicial = 0;
             app.firstChild.remove();
         }
         const painel = document.createElement("div");
-
+        const cores = ["red", "yellow", "green", "blue"];
         const grafico = document.createElement("div");
         grafico.className = "grafico";
-        painel.appendChild(grafico);
         for (const mes of ano.meses) {
-            const coluna = document.createElement('div');
-            coluna.className = 'grafico-coluna';
-            
+            const coluna = document.createElement("div");
+            coluna.className = "grafico-coluna";
+            const cor = document.createElement("div");
+            cor.style.height = (mes.totalizador.saldo*100)/10000;
+            cor.style.background = cores.pop();
+            coluna.appendChild(cor);
+            const nomeDoMes = document.createElement("div");
+            nomeDoMes.className = "grafico-coluna-texto";
+            nomeDoMes.innerText = mes.nome;
+            coluna.appendChild(cor);
+            coluna.appendChild(nomeDoMes);
             grafico.appendChild(coluna);
         }
+        painel.appendChild(grafico);
 
         for (const mes of ano.meses) {
             addElement(painel, "h4", mes.nome);
@@ -90,7 +98,6 @@ const saldoInicial = 0;
 
             for (const lancamento of mes.lancamentos) {
                 const linhaLancamento = document.createElement("tr");
-                // addElement(linhaLancamento, "td", lancamento.tipo);
                 addElement(linhaLancamento, "td", lancamento.categoria);
                 addElement(linhaLancamento, "td", formatarDinheiro(lancamento.valor));
                 tabelaLancamentos.appendChild(linhaLancamento);
