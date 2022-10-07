@@ -45,4 +45,4 @@ function ParDeBarreiras(altura, abertura, x) {
 }
 
 const b = new ParDeBarreiras(700, 200, 400);
-document.querySelector('[wm-flappy]').appendChild(b.elemento)
+document.querySelector('[wm-flappy]').appendChild(b.elemento);
