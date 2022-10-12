@@ -33,80 +33,39 @@ const saldoInicial = 0;
     ano.adicionarMes(abril);
     ano.calcularSaldo();
 
-    console.log(janeiro)
-    console.log(fevereiro)
-    console.log(marco)
-    console.log(abril)
-
-    console.log(ano.meses);
-
-    function addElement (parent, elementType, text) {
-        const element = document.createElement(elementType);
-        if (text !== "" && text !== undefined && text !== null && text !== 0) {
-            element.innerText = text;
-        }
-        parent.appendChild(element);
-    }
-
-    class Tabela {
-        constructor (className) {
-            this.element = document.createElement('table');
-            this.element.className = className;
+    class Select {
+        constructor (id) {
+            this.element = document.createElement('select');
+            this.element.id = id;
         }
 
-        addRow (type, values) {
-            const tr = document.createElement('tr');
-            for (const value of values) {
-                const td = document.createElement(type);
-                td.innerText = value;
-                tr.appendChild(td);
-            }
-                this.element.appendChild(tr);
+        addOption (text) {
+            const option = document.createElement('option');
+            option.text = text;
+            this.element.appendChild(option);
         }
     }
 
-    function renderizar () {
-        const app = document.getElementById("app");
-        if (app.firstChild) {
-            app.firstChild.remove();
+    class Input {
+        constructor (id, type, placeholder) {
+            this.element = document.createElement('input');
+            this.element.id = id;
+            this.element.type = type;
+            this.element.placeholder = placeholder;
         }
-        const painel = document.createElement("div");
-        const cores = ["red", "yellow", "green", "blue"];
-        const grafico = document.createElement("div");
-        grafico.className = "grafico";
-        for (const mes of ano.meses) {
-            const coluna = document.createElement("div");
-            coluna.className = "grafico-coluna";
-            const cor = document.createElement("div");
-            cor.style.height = (mes.totalizador.saldo*100)/10000;
-            cor.style.background = cores.pop();
-            coluna.appendChild(cor);
-            const nomeDoMes = document.createElement("div");
-            nomeDoMes.className = "grafico-coluna-texto";
-            nomeDoMes.innerText = mes.nome;
-            coluna.appendChild(cor);
-            coluna.appendChild(nomeDoMes);
-            grafico.appendChild(coluna);
-        }
-        painel.appendChild(grafico);
-
-        for (const mes of ano.meses) {
-            addElement(painel, "h4", mes.nome);
-
-            const tabelaLancamentos = new Tabela('tabela-lancamentos');
-            tabelaLancamentos.addRow('th', ['Categoria', 'Valor']);
-            for (const lancamento of mes.lancamentos) {
-                tabelaLancamentos.addRow('td', [lancamento.categoria, formatarDinheiro(lancamento.getValorString())])
-            }
-            tabelaLancamentos.addRow('th', ['Juros', formatarDinheiro(mes.totalizador.juros)]);
-            tabelaLancamentos.addRow('th', ['Rendimentos', formatarDinheiro(mes.totalizador.rendimentos)]);
-            tabelaLancamentos.addRow('th', ['Total', formatarDinheiro(mes.totalizador.saldo)]);
-            painel.appendChild(tabelaLancamentos.element);
-        }
-        app.appendChild(painel);
     }
 
-    renderizar();
+    class Button {
+        constructor (id, text) {
+            this.element = document.createElement('button');
+            this.element.id = id;
+            this.element.innerText = text;
+        }
+
+        addListener (fn) {
+            this.element.addEventListener('click', fn);
+        }
+    }
 
     function adicionarLancamento() {
         const mes = document.getElementById("mes");
@@ -120,14 +79,56 @@ const saldoInicial = 0;
         categoria.value = "";
         tipo.value = "receita";
         valor.value = "";
-    } 
-
-    const botao = document.getElementById("botao");
-    botao.addEventListener("click", adicionarLancamento);
-
-    const mesSelect = document.getElementById("mes");
-    for (const mes of ano.meses) {
-        const option = document.createElement("option");
-        option.text = mes.nome;
-        mesSelect.add(option)
     }
+
+    function renderizar () {
+        const app = document.getElementById("app");
+        if (app.firstChild) {
+            app.firstChild.remove();
+        }
+        const painel = new Div();
+        const titulo = new h4('Finanças Pessoais');
+        const form = new Div('form-lancamento');
+        painel.adicionarElementoFilho(titulo.element);
+        const mesSelect = new Select('mes');
+        const tipoSelect = new Select('tipo');
+        for (const mes of ano.meses) {
+            mesSelect.addOption(mes.nome);
+        }
+        tipoSelect.addOption('receita');
+        tipoSelect.addOption('despesa');
+        const categoriaInputText = new Input('categoria', 'text', 'Categoria');
+        const valorInputNumber = new Input('valor', 'number', 'Valor');
+        const adicionarButton = new Button('botao', 'Adicionar');
+        adicionarButton.addListener(() => {
+            adicionarLancamento();
+        });
+        form.adicionarElementoFilho(mesSelect.element);
+        form.adicionarElementoFilho(tipoSelect.element);
+        form.adicionarElementoFilho(categoriaInputText.element);
+        form.adicionarElementoFilho(valorInputNumber.element);
+        form.adicionarElementoFilho(adicionarButton.element);
+        painel.adicionarElementoFilho(form.element);
+
+
+        const grafico = new Grafico();
+        for (const mes of ano.meses) {
+            grafico.adicionarColuna(mes.totalizador.saldo, mes.nome)
+        }
+        painel.adicionarElementoFilho(grafico.element);
+        for (const mes of ano.meses) {
+            const nomeDoMes = new h4(mes.nome);
+            painel.adicionarElementoFilho(nomeDoMes.element)
+            const tabelaLancamentos = new Tabela('tabela-lancamentos');
+            tabelaLancamentos.addRow('th', ['Categoria', 'Valor']);
+            for (const lancamento of mes.lancamentos) {
+                tabelaLancamentos.addRow('td', [lancamento.categoria, formatarDinheiro(lancamento.getValorString())])
+            }
+            tabelaLancamentos.addRow('th', ['Juros', formatarDinheiro(mes.totalizador.juros)]);
+            tabelaLancamentos.addRow('th', ['Rendimentos', formatarDinheiro(mes.totalizador.rendimentos)]);
+            tabelaLancamentos.addRow('th', ['Total', formatarDinheiro(mes.totalizador.saldo)]);
+            painel.adicionarElementoFilho(tabelaLancamentos.element);
+        }
+        app.appendChild(painel.element);
+    }
+    renderizar();
