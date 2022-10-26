@@ -99,7 +99,21 @@
         // $('a[href="#link1"]').parentsUntil($('body')).css(comBorda);
         // $('a[href="#link1"]').parentsUntil($('body')).css(semBorda);
 
-        $('main').children().css(comBorda);
-        $('main').children().css(semBorda);
+        // $('main').children().css(comBorda);
+        // $('main').children().css(semBorda);
+
+        // $('body').find('a').css(comBorda);
+        // $('body').find('a').css(semBorda);
+
+        const elementoDom = document.getElementsByClassName('menu');
+        // $(elementoDom).css(comBorda);
+        // $(elementoDom).css(semBorda);
+
+        // $('main').children().each((i, e) => $(e).css(comBorda));
+        // $('main').children().each((i, e) => $(e).css(semBorda));
+
+        $('li').each((i, e) => {
+            $(e).css(comBorda)
+        })
     </script>
 </body>
