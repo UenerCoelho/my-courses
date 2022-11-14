@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Saudacao from './componentes/Saudacao'
-
+import Pai from './componentes/Pai'
+// import Saudacao from './componentes/Saudacao'
 // import Multi, { BoaNoite } from './componentes/Multiplos'
 // import Primeiro from './componentes/Primeiro'
 // import BomDia from './componentes/BomDia'
@@ -11,6 +11,6 @@ import Saudacao from './componentes/Saudacao'
 
 ReactDOM.render(
   <div>
-    <Saudacao tipo="Bom dia" nome="João" />
+    <Pai nome="Paulo" sobrenome="Silva" />
   </div>
   , document.getElementById('root'))
