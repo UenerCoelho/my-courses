@@ -1,13 +1,15 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/24-ProjetoCadastroDeUsuario/react/crud/node_modules
-/24-ProjetoCadastroDeUsuario/react/crud/.pnp
-/24-ProjetoCadastroDeUsuario/react/crud/build
-/24-ProjetoCadastroDeUsuario/react/crud/coverage
-/node_modules
-/.pnp
+24-ProjetoCadastroDeUsuario/crud/backend/node_modules
+24-ProjetoCadastroDeUsuario/crud/frontend/node_modules
+24-ProjetoCadastroDeUsuario/crud/.pnp
+24-ProjetoCadastroDeUsuario/crud/build
+24-ProjetoCadastroDeUsuario/crud/coverage
+24-ProjetoCadastroDeUsuario/node_modules
+24-ProjetoCadastroDeUsuario/.pnp
 .pnp.js
+.vscode
 
 # testing
 /coverage
