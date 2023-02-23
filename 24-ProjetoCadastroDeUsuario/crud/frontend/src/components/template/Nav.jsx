@@ -3,5 +3,5 @@ import React from 'react'
 
 export default props =>
   <aside className="menu-area">
-    Nav.
+    Navigation
   </aside>
