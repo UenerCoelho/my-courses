@@ -1,7 +1,7 @@
 import './Nav.css'
 import React from 'react'
 
-export default props =>
+export default _props =>
   <aside className="menu-area">
     Navigation
   </aside>

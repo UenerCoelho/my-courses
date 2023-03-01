@@ -1,7 +1,7 @@
 import './Footer.css'
 import React from 'react'
 
-export default props =>
+export default _props =>
   <footer className="footer">
     Footer
   </footer>
