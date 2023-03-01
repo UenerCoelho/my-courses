@@ -12,6 +12,6 @@ export default _props =>
   <div className="app">
     <Logo />
     <Nav />
-    <Main icon="home" title="Iníccio" subtitle="Segundo Projeto do Capítulode react"/>
+    <Main icon="home" title="Início" subtitle="Segundo Projeto do Capítulo de react"/>
     <Footer />
   </div>
