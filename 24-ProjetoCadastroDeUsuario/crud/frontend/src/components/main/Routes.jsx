@@ -1,8 +1,8 @@
-import React from "react";
-import { Routes, Route, Redirect } from 'react-router-dom'
+import React from "react"
+import { Routes, Route } from "react-router-dom"
 
-import Home from '../home/Home'
-import UserCrud from '../users/UserCrud'
+import Home from "../home/Home"
+import UserCrud from "../users/UserCrud"
 
 export default _props => (
   <Routes>
