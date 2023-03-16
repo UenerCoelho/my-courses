@@ -9,7 +9,7 @@ function sayHello() {
 let x= sayHello()
 console.log(x)
 
-// Function Declaration com parâmetro e retorno
+// Function Declaration com parâmetro e não retorna algo
 
 function sayHelloTo(name) {
   console.log('Hello ' + name);
@@ -18,6 +18,7 @@ function sayHelloTo(name) {
 sayHelloTo('Uener')
 sayHelloTo() //Retornará 'undefined'
 
+// Não recebe Parâmetro mais retorna algo
 function literals() {
   return 'String literals'
 }
