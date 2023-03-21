@@ -1,5 +1,6 @@
 // Função auto-executável, ou função imediatamente executável
 (function (a, b, c) {
+  'use strict'
   d = a + (b - c);
   console.log( `Result: ${d}`)
   let e = 10 * d;
