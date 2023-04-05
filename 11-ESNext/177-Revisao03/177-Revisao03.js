@@ -17,7 +17,7 @@ console.log(talk.person, talk.ola());
 // Classe
 class Animal {}
 
-// Herança de classe
+// Ilustração de uma Herança de classe
 class Cachorro extends Animal {
   falar() {
     return 'Au au'
