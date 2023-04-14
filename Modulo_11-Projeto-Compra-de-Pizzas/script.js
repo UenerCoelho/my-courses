@@ -1,5 +1,5 @@
-const c = e => document.querySelector(e)
-const cs = e => document.querySelectorAll(e)
+const qs = e => document.querySelector(e)
+const qsa = e => document.querySelectorAll(e)
 
 pizzaJson.map((item, index) => {
   let pizzaItem = document.querySelector(".models .pizza-item").cloneNode(true)
@@ -13,12 +13,12 @@ pizzaJson.map((item, index) => {
   pizzaItem.querySelector("a").addEventListener("click", e => {
     e.preventDefault()
 
-    c(".pizzaWindowArea").style.opacity = 0
-    c(".pizzaWindowArea").style.display = "flex"
+    q(".pizzaWindowArea").style.opacity = 0
+    q(".pizzaWindowArea").style.display = "flex"
     setTimeout(() => {
-      c(".pizzaWindowArea").style.opacity = 1
+      q(".pizzaWindowArea").style.opacity = 1
     }, 200)
   })
 
-  c(".pizza-area").append(pizzaItem)
+  q(".pizza-area").append(pizzaItem)
 })
