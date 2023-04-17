@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #eee;
+  background-color: #333;
   font-family: "Lato", Helvetica, Arial;
   font-size: 15px;
   display: flex;
@@ -106,18 +106,18 @@ h1 {
 }
 .pizza-item--price {
   font-size: 15px;
-  color: #333;
+  color: #ccc;
   margin-top: 5px;
 }
 .pizza-item--name {
   font-size: 20px;
   font-weight: bold;
-  color: #000;
+  color: #eee;
   margin-top: 5px;
 }
 .pizza-item--desc {
   font-size: 13px;
-  color: #555;
+  color: #ccc;
   margin-top: 10px;
 }
 
