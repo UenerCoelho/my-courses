@@ -1,8 +1,6 @@
 let cart = []
 let modalQt = 1
 let modalKey = 0
-const c = e => document.querySelector(e)
-const cs = e => document.querySelectorAll(e)
 
 //Listagem das Pizzas
 pizzaJson.map((item, index) => {
@@ -22,65 +20,84 @@ pizzaJson.map((item, index) => {
     modalQt = 1
     modalKey = key
 
-    c(".pizzaBig img").src = pizzaJson[key].img
-    c(".pizzaInfo h1").innerHTML = pizzaJson[key].name
-    c(".pizzaInfo--desc").innerHTML = pizzaJson[key].description
+    document.querySelector(".pizzaBig img").src = pizzaJson[key].img
+    document.querySelector(".pizzaInfo h1").innerHTML = pizzaJson[key].name
+    document.querySelector(".pizzaInfo--desc").innerHTML =
+      pizzaJson[key].description
 
-    c(".pizzaInfo--size.selected").classList.remove("selected")
-    cs(".pizzaInfo--size").forEach((size, sizeIndex) => {
+    document
+      .querySelector(".pizzaInfo--size.selected")
+      .classList.remove("selected")
+    document.querySelectorAll(".pizzaInfo--size").forEach((size, sizeIndex) => {
       if (sizeIndex == 2) {
         size.classList.add("selected")
       }
       size.querySelector("span").innerHTML = pizzaJson[key].sizes[sizeIndex]
     })
-    c(".pizzaInfo--actualPrice").innerHTML = `R$ ${pizzaJson[key].price.toFixed(
-      2
-    )}`
+    document.querySelector(
+      ".pizzaInfo--actualPrice"
+    ).innerHTML = `R$ ${pizzaJson[key].price.toFixed(2)}`
 
-    c(".pizzaInfo--qt").innerHTML = modalQt
+    document.querySelector(".pizzaInfo--qt").innerHTML = modalQt
 
-    c(".pizzaWindowArea").style.opacity = 0
-    c(".pizzaWindowArea").style.display = "flex"
+    document.querySelector(".pizzaWindowArea").style.opacity = 0
+    document.querySelector(".pizzaWindowArea").style.display = "flex"
     setTimeout(() => {
-      c(".pizzaWindowArea").style.opacity = 1
+      document.querySelector(".pizzaWindowArea").style.opacity = 1
     }, 200)
   })
 
-  c(".pizza-area").append(pizzaItem)
+  document.querySelector(".pizza-area").append(pizzaItem)
 })
 
 // Eventos do Modal
 function closeModal() {
-  c(".pizzaWindowArea").style.opacity = 0
+  document.querySelector(".pizzaWindowArea").style.opacity = 0
   setTimeout(() => {
-    c(".pizzaWindowArea").style.display = "none"
+    document.querySelector(".pizzaWindowArea").style.display = "none"
   }, 350)
 }
-cs(".pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton").forEach(item => {
-  item.addEventListener("click", closeModal)
-})
-c(".pizzaInfo--qtMenos").addEventListener("click", () => {
+document
+  .querySelectorAll(".pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton")
+  .forEach(item => {
+    item.addEventListener("click", closeModal)
+  })
+document.querySelector(".pizzaInfo--qtMenos").addEventListener("click", () => {
   modalQt > 1 ? modalQt-- : (modalQt = 1)
-  c(".pizzaInfo--qt").innerHTML = modalQt
+  document.querySelector(".pizzaInfo--qt").innerHTML = modalQt
 })
-c(".pizzaInfo--qtMais").addEventListener("click", () => {
+document.querySelector(".pizzaInfo--qtMais").addEventListener("click", () => {
   modalQt++
-  c(".pizzaInfo--qt").innerHTML = modalQt
+  document.querySelector(".pizzaInfo--qt").innerHTML = modalQt
 })
-cs(".pizzaInfo--size").forEach((size, sizeIndex) => {
+document.querySelectorAll(".pizzaInfo--size").forEach((size, sizeIndex) => {
   size.addEventListener("click", () => {
-    c(".pizzaInfo--size.selected").classList.remove("selected")
+    document
+      .querySelector(".pizzaInfo--size.selected")
+      .classList.remove("selected")
     size.classList.add("selected")
   })
 })
-c(".pizzaInfo--addButton").addEventListener("click", () => {
-  let size = parseInt(c(".pizzaInfo--size.selected").getAttribute("data-key"))
+document
+  .querySelector(".pizzaInfo--addButton")
+  .addEventListener("click", () => {
+    let size = parseInt(
+      document
+        .querySelector(".pizzaInfo--size.selected")
+        .getAttribute("data-key")
+    )
 
-  cart.push({
-    id: pizzaJson[modalKey].id,
-    size,
-    qt: modalQt
+    let identifier = pizzaJson[modalKey].id + "@" + size
+
+    let key = cart.findIndex(item => item.identifier == identifier)
+    key > -1
+      ? (cart[key].qt += modalQt)
+      : cart.push({
+          identifier,
+          id: pizzaJson[modalKey].id,
+          size,
+          qt: modalQt
+        })
+
+    closeModal()
   })
-
-  closeModal()
-})
