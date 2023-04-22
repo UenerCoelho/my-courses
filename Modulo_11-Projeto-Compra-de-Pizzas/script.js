@@ -102,7 +102,7 @@ document
 
 document.querySelector(".menu-openner").addEventListener("click", () => {
   if (cart.length > 0) {
-    document.querySelector(".aside").style.left = "0"
+    document.querySelector("aside").style.left = "0"
   }
 })
 document.querySelector(".menu-closer").addEventListener("click", () => {
