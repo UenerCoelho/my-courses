@@ -79,5 +79,14 @@ let pizzaJson = [
     sizes: ["320g", "530g", "860g"],
     description:
       "Descrição da pizza em mais de uma linha muito legal bem interessante"
+  },
+  {
+    id: 10,
+    name: "Chocolate",
+    img: "images/pizza7.png",
+    price: 22.36,
+    sizes: ["320g", "530g", "860g"],
+    description:
+      "Descrição da pizza em mais de uma linha muito legal bem interessante"
   }
 ]
