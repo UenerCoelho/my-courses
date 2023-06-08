@@ -1,0 +1,1 @@
+# Projeto Calculadora está na pasta de projetos

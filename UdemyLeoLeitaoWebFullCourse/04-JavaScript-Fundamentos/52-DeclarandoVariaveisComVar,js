@@ -1,0 +1,14 @@
+{ 
+  { 
+    { 
+      { 
+        var sera = 'Será que vai imprimir??' 
+        console.log(sera.concat(' - 0'));
+      } 
+      console.log(sera.concat(' - 1'));
+    } 
+    console.log(sera.concat(' - 2'));
+  } 
+  console.log(sera.concat(' - 3'));
+};
+console.log(sera.concat(' - 4'));

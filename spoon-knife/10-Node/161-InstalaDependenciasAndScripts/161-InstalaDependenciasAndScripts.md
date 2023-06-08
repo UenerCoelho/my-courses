@@ -1,0 +1,2 @@
+# 161-Instalar Dependências And Scripts
+- Nesta aula é ensinado a usar o comando "npm i" para reinstalar as dependências do arquivo package.json dentro do repositório raiz do projeto, recomendo assistir a aula novamente
