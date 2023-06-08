@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+p::first-letter{
+    font-size: 25px;
+    font-weight: bold;
+}
+p::first-line{
+    background-color: green;
+}

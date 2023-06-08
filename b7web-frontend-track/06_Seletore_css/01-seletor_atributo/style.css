@@ -1,0 +1,32 @@
+body{
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    width: 360px;
+}
+.example{
+    display:flex;
+    flex-direction: column;
+    width: 360px;
+    /* margin: auto; */
+}
+[required]{
+    background-color: #00ffdd;
+}
+input[type=password]{
+    background-color: green;
+}
+input[type=text]::after{
+    content: "-=>";
+    margin: 20px;
+}
+a[href*="com.br"]{
+    text-decoration: none;
+    color: greenyellow;
+    background-color: darkgreen;
+}
+a[href*="alunos"]{
+    text-decoration: none;
+    color: violet;
+    background-color: grey;
+}

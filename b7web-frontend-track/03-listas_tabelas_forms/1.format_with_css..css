@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px;
+  font-size: 17px;
+}
+/* podemos formatar desta forma, listando o elemento, mas neste caso todos os elemento "p" receberam os mesmo "styles" */
+p {
+  /* cor da fonte */
+  color: #00f;
+  /* tamanho da fonte */
+  font-size: 30px;
+  /* peso da font, normal, bold(negrito), etc */
+  font-weight: bold;
+  /* font padrão do navegor é serif, caso coloque uma que não tem no computador do usário */
+  font-family: Helvetica, Arial;
+}
+
+/* também podemos inserir o "style" desta forma, assim, através de classes, desta forma podemos inserir "styles" diferentes para elementos do mesmo nome. */
+.paragrafo1 {
+  border: 3px solid gray;
+}
+
+.paragrafo2 {
+  border: 3px solid green;
+}
+
+.paragrafo3 {
+  border: 3px solid red;
+}
+
+/* aqui removemos o sublinhado do link do lorem ipsum */
+a {
+  text-decoration: none;
+}
+
+/* agora colocamos o sublinhado novamente, entretando, somente com o passar do mouse */
+a:hover {
+  text-decoration: underline;
+}
