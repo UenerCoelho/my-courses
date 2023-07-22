@@ -1,0 +1,54 @@
+<!-- 
+  <fieldset>
+    - agrupamento de campos
+    - mesmo propósito
+    - semântico
+    - acessibilidade
+  
+  Atributos especiais
+    - disabled
+      - desabilita todos os elementos internos
+      - não serão enviados ao submeter o formulário
+    - form
+      - o id de um formulário ao qual esse fieldset pertence
+      - não precisa estar dentro do formulário
+    - name
+      - nome do grupo
+    
+    <legend>
+      - nome do agrupamento
+      - primeiro elemento do fieldset
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fieldset & Legend tags</title>
+</head>
+
+<body>
+  <!-- form com fieldset dentro -->
+  <form action="">
+    <fieldset>
+      <legend>Contato</legend>
+      <label for=""></label>
+      <input type="text">
+    </fieldset>
+  </form>
+  <br>
+
+  <!-- form com fieldset fora, em outra parte do código -->
+  <form action="" id="nome" name="inputs-name">
+    <button>Enviar</button>
+  </form>
+  <fieldset form="nome">
+    <legend>Name</legend>
+    <label for=""></label>
+    <input type="text">
+  </fieldset>
+</body>
+
+</html>

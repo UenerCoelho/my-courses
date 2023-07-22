@@ -1,0 +1,68 @@
+<!-- 
+    <datalist>
+      - Lista de valores como sugestão a uma tag <input>
+      - Valores sugestivos  não obrigatórios
+      - Usuários poderão selecionar um dos valores, ou um valor diferente da sugestão.
+
+      <datalist id="fruidata">
+        <option>apple<option>
+        <option>banana<option>
+        <option>mango<option>
+        <option>orange<option>
+        <option>cherry<option>
+        </datalist>
+      
+    list
+        - Recebe como valor o id de um <datalist> residente no mesmo documento.
+
+    Tipos de input suportados
+        - text, search, url, tel, email, date, month, week, time, datetime-local, number, range e color.
+
+      * Valores de data list que não são compatíveis com o tipo do <input> não serão apresentados.
+    
+      Tipos de input não suportados (conforme especificação)
+         - hidden, password checkbox, radio, file, ou  qualquer tipo de button
+
+    
+      User Agent
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Datalist</title>
+</head>
+
+<body>
+  <input type="text" list="fruitsdata" placeholder="Escolha ua Fruta" />
+  <datalist id="fruitsdata">
+    <option>apple
+    <option>
+    <option>banana
+    <option>
+    <option>mango
+    <option>
+    <option>orange
+    <option>
+    <option>cherry
+    <option>
+  </datalist><br>
+
+  <input type="color" list="colors">
+
+  <datalist id="colors">
+    <option>#F01000</option>
+    <option>#FD9000</option>
+    <option>#8E3000</option>
+    <option>#015234</option>
+    <option>#234561</option>
+    <option>#561240</option>
+    <option>#240000</option>
+  </datalist>
+</body>
+
+</html>
