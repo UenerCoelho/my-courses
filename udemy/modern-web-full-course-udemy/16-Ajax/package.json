@@ -6,7 +6,7 @@
   "scripts": {
     "start" : "nodemon server.js"
   },
-  "author": "",
+  "author": "Cod3r Cursos - Udemy",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.18.2",
