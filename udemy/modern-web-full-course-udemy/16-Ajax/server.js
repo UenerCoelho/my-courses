@@ -29,4 +29,12 @@ app.post('/upload', (req, res) => {
   })
 })
 
+// Aula 307
+app.post('/form', (req, res) => {
+  res.send({
+    ...req.body,
+    id: 1
+  })
+})
+
 app.listen(8080, () => console.log('Executando... '))
