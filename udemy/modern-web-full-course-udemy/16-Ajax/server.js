@@ -30,11 +30,10 @@ app.post('/upload', (req, res) => {
 })
 
 // Aula 307
-app.post('/form', (req, res) => {
+app.post('/formulario', (req, res) => {
   res.send({
     ...req.body,
     id: 1
-    // aki parou
   })
 })
 
