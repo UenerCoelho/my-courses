@@ -8,4 +8,4 @@ function copiar(cb) {
   return cb()
 }
 
-// module.exports.default = series(copiar)
+module.exports.default = series(copiar)
