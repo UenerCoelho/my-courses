@@ -85,7 +85,7 @@
   </body>
 </html>
 ```
-
+  Abaixo realizamos a formatção dos código HTML acima, através do CSS. Para conferir basta abrir o arquivo ".1format_with_css.html" dentro da pasta deste READEME.
 ```css
 * {
   box-sizing: border-box;

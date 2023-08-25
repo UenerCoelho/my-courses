@@ -18,7 +18,7 @@
 14. [Formatação de textos no HTML](#formatação-de-textos-no-html)
 15. [Comentários no HTML](#comentários-no-html)
 
-### 1. O que é indentação?
+### O que é indentação?
 
 - Consiste em diferenciar, com a tecla tabulação, para diferenciar as linhas e os escopos do código.
 
