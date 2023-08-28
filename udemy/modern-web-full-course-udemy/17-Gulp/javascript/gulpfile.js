@@ -14,10 +14,16 @@ function defaultFunc(cb) {
       })
     )
     .pipe(uglify())
-    .on('erro', function(e))
+    .on('erro', err => console.log(err))
     .pipe(concat('code.min.js'))
     .pipe(gulp.dest('build'))
+
   return cb()
 }
 
-module.exports.default = series(defaultFunc)
+function fim(cb) {
+  console.log('Fim!!!')
+  return cb()
+}
+
+module.exports.default = series(defaultFunc, fim)
