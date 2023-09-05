@@ -10,12 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
-"class": "player",
+"class": "_12_strings",
 "language": "GDScript",
-"path": "res://Player.gd"
+"path": "res://_12_strings.gd"
+}, {
+"base": "Node2D",
+"class": "_13_float",
+"language": "GDScript",
+"path": "res://_13_float.gd"
 } ]
 _global_script_class_icons={
-"player": ""
+"_12_strings": "",
+"_13_float": ""
 }
 
 [application]
