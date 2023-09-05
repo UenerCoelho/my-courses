@@ -10,6 +10,16 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "_10_class_name",
+"language": "GDScript",
+"path": "res://_10_class_name.gd"
+}, {
+"base": "Node2D",
+"class": "_11_resered_funtions",
+"language": "GDScript",
+"path": "res://_11_reserved_functions.gd"
+}, {
+"base": "Node2D",
 "class": "_12_strings",
 "language": "GDScript",
 "path": "res://_12_strings.gd"
@@ -18,10 +28,24 @@ _global_script_classes=[ {
 "class": "_13_float",
 "language": "GDScript",
 "path": "res://_13_float.gd"
+}, {
+"base": "Node2D",
+"class": "_14_int",
+"language": "GDScript",
+"path": "res://_14_int.gd"
+}, {
+"base": "Node2D",
+"class": "_15_dynamic_typing",
+"language": "GDScript",
+"path": "res://_15_dynamic_typing.gd"
 } ]
 _global_script_class_icons={
+"_10_class_name": "",
+"_11_resered_funtions": "",
 "_12_strings": "",
-"_13_float": ""
+"_13_float": "",
+"_14_int": "",
+"_15_dynamic_typing": ""
 }
 
 [application]
