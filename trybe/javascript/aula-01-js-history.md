@@ -44,3 +44,19 @@
 <h1 align="center">
   <img alt="Back-end img" src=".github/back-end.webp" width="100%" />
 </h1>
+
+- Por exemplo, ao realizar seu login em uma rede social, o front-end é responsável por realizar a coleta dos dados e enviar ao back-end, que verifica se suas credenciais estão corretas e devolve informações do seu perfil para o front-end, que as carrega e exibe na tela.
+
+- Atualmente o JavaScript é utilizado tanto para front-end quanto para back-end. Por isso, ao aprender a programar com essa linguagem, você está se preparando para trabalhar nesses dois contextos dentro do desenvolvimento web! Isso não é maravilhoso?
+
+### O potencial do JavaScript no mercado de trabalho
+- A versatilidade é algo que se destaca no JavaScript, que pode ser utilizado em laptops, smartphones, videogames, aplicativos, entre outros.
+
+- Muitas empresas de tecnologia têm ao menos parte do seu código escrito em JavaScript, incluindo gigantes da tecnologia como Netflix, Facebook, Google, Microsoft, LinkedIn e Uber.
+
+- O Facebook e o Google utilizam tanto o JavaScript que criaram ferramentas próprias para trabalhar melhor com a linguagem. Hoje essas ferramentas são públicas e estão disponíveis para que você as utilize para construir suas próprias páginas e aplicações.
+
+- E tem mais! Estudos apontam que, até 2025, serão criadas cerca de 797 mil vagas de T.I., e o Brasil forma apenas 53 mil pessoas por ano na área. Veja uma matéria completa sobre o tema em Exame.
+
+### Desenvolvimento de habilidades comportamentais por meio da prática da programação
+- No mercado de trabalho, é preciso ter habilidades que vão além das habilidades técnicas, entre elas as socioemocionais, conhecidas como soft skills, que ajudam a ter mais consciência sobre o seu comportamento. Por exemplo, ao se deparar com um problema, você precisará analisar, pesquisar e compreender qual é a melhor forma de solucioná-lo, desenvolvendo suas habilidades criativas e de resolução de problemas.
