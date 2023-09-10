@@ -45,9 +45,9 @@
 
 - Imagine que estamos em um restaurante e fazemos o pedido para o garçom, que leva nosso pedido até a cozinha. A cozinha prepara a nossa refeição e o garçom nos traz. Nesse caso, o garçom é o front-end. A cozinha, que recebe nosso pedido, prepara e informa o garçom para entregar, é o back-end. Observe a imagem abaixo, que representa esse fluxo:
 
-<h1 align="center">
+<p align="center">
   <img alt="Back-end img" src=".github/back-end.webp" width="100%" />
-</h1>
+</p>
 
 - Por exemplo, ao efetuarmos o login em uma rede social, o front-end é responsável por realizar a coleta dos dados e enviar ao back-end, que verifica se nossas credenciais estão corretas e devolve informações do nosso perfil para o front-end, que as carrega e exibe na tela.
 
