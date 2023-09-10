@@ -92,6 +92,183 @@
 
     - Agora a variável `roupa` passou a ter um novo valor: `'moletom'`.
 
-    - A partir daqui já podemos começar a escrever as nossas primeiras linhas de código.
+## Vamos a prática!
 
-    - 
+  - A partir daqui já podemos começar a escrever as nossas primeiras linhas de código.
+
+  - Vamos declarar uma variável que irá receber a informação `comidaFavorita`!
+
+  - __Primeiro passo:__ Digite o código abaixo no `console` do seu navegador:
+
+    ~~~javascript
+      let [nome] = [valor];
+    ~~~
+  
+  - __Segundo passo:__ Substitua o `[nome]` e `[valor]` conforme essas orientações:
+
+    - A variável está sendo declarada com a palavra-chave `let`;
+    - Substitua o `[nome]` na expressão por um nome que descreva nitidamente o que vai ser guardado dentro da variável.
+  
+    > ⚠️ _Atenção, existem algumas regras gerais para nomear variáveis_ ⚠️:
+
+    - Não pode haver espaço entre as palavras;
+    - Não é possível começar o nome de uma variável com um número, mas é possível usar números em outras posições. Por exemplo: `1comida` não vai funcionar, mas `comida1` funciona;
+    - Nomes de variáveis são sensíveis a letras maiúsculas e minúsculas. Ou seja, `Comida` é diferente de `COMIDA` que é diferente de `comida`;
+
+  - Além dessas regras, existe uma convenção padrão para criação de nomes de variáveis em JavaScript chamada `camelCase`:
+
+    - As palavras são agrupadas em uma;
+    - O nome da variável começa com letra minúscula;
+    - Cada palavra nova começa com uma letra maiúscula, como acontece no próprio `camelCase`. Por exemplo: `carroVermelho`.
+
+  - No nosso exemplo, podemos chamar a variável de `comidaFavorita`:
+
+    ~~~javascript
+      let comidaFavorita = [valor];
+    ~~~
+
+  - __Terceiro passo:__ Atribua um valor para a variável comidaFavorita:
+
+  - Por último, você precisa atribuir um valor para sua variável comidaFavorita. Digamos que sua comida favorita é pizza.
+
+  - Valores que são textos, frases ou palavras devem ser sempre envolvidas por aspas.
+
+  > __Dica:__ _Podemos utilizar tanto aspas simples `'` quanto aspas duplas `"`. Porém, aspas simples são mais utilizadas._
+
+  - Veja como fica:
+
+    ~~~javascript
+      let comidaFavorita = 'Pizza';
+    ~~~
+
+  - Para visualizar o valor da variável, podemos utilizar o comando `console.log`, que serve para visualizar as informações no console do navegador.
+
+  - Para isso, basta envolver a variável `comidaFavorita` dentro dos parênteses.
+
+    ~~~javascript
+      let comidaFavorita = 'Pizza';
+      
+      console.log(comidaFavorita);
+    ~~~
+
+  - Ao executar o código acima, veremos a palavra `Pizza` no console do navegador.
+
+  - Imagine que agora a comida favorita é lasanha. Como faríamos para substituir o valor da variável?
+
+  - Exemplo:
+
+    ~~~javascript
+      let comidaFavorita = 'Pizza';
+
+      comidaFavorita = 'Lasanha';
+
+      console.log(comidaFavorita);
+    ~~~
+
+  - Você verá escrita a palavra 'Lasanha' no console. Legal né? E você pode atribuir um novo valor para sua variável quantas vezes precisar! Mude o valor da sua variável comidaFavorita no código e execute no navegador para ver o resultado!
+
+## Diferenças entre as palavras-chave `var`, `let` e `const`
+
+  - Existem três palavras-chave que você pode utilizar para declarar variáveis: `var`, `let` e `const`.
+
+  - As palavras-chave `let` e `const` foram introduzidas à linguagem JavaScript em 2015. Antes disso só era possível usar a palavra-chave `var`.
+
+  - Como o `var` é mais antigo, mas ainda há muito código escrito com ele, é importante conhecer essa palavra-chave. O `let` possui algumas vantagens em relação ao var e hoje em dia, é uma boa prática utilizar somente `let` e `const` para declarar variáveis. 😄
+
+  - Vamos agora descobrir a diferença entre `var`, `let` e `const`:
+
+  - Com o `let` você consegue declarar uma variável e reatribuir valor à ela:
+
+    ~~~javascript
+      let meuNome = 'Maria';
+
+      meuNome = 'Aline';
+
+      console.log(meuNome);
+    ~~~
+
+  - O `var` tem praticamente as mesmas funcionalidades que o `let` e você também pode reatribuir valor à variável:
+
+    ~~~javascript
+      var meuNome = 'Maria';
+
+      meuNome = 'Aline';
+
+      console.log(meuNome);
+    ~~~
+
+  - A `const` tem uma diferença: uma característica dessa palavra-chave é que ela é uma constante. Isto significa que, uma vez que essa variável é declarada, o valor dela não poderá ser alterado.
+
+  - Digite e execute o código abaixo no console do seu navegador:
+
+    ~~~javascript
+      const meuNome = 'Maria';
+
+      meuNome = 'Aline';
+
+      console.log(meuNome);
+    ~~~
+
+  - Você receberá um erro de execução, dizendo que não é possível reatribuir valores para constantes. Esse tipo de variável é útil para guardar valores que nunca serão alterados ao longo da execução do programa.
+
+  > __Dica__: _Com a palavra-chave let você poderá reatribuir valores à sua variável quantas vezes quiser. Com a palavra-chave `const` você só poderá atribuir o valor uma única vez._
+
+## Exercícios:
+
+### Crie uma variável `cor`
+
+  - Crie uma variável chamada `cor`, que pode ter seu valor alterado e atribua à ela o nome da cor `'verde'`. Lembre-se de colocar a cor entre aspas simples (`''`).
+      ~~~javascript
+        let cor = 'verde';
+      ~~~
+
+### Atribua e reatribua valores
+
+  - Crie uma variável chamada `cidade` e atribua à ela o nome `'Parauapebas'`. Depois, mude o nome da cidade armazenada na variável `cidade` para `'Rio de Janeiro'`. Lembre-se de colocar o nome da cidade entre aspas simples (`''`).
+
+    ~~~javascript
+      let cidade = 'Parauapebas';
+
+      cidade = 'Rio de Janeiro';
+
+      console.log(cidade) // Rido de Janeiro
+    ~~~
+
+### Crie uma constante para armazenar o seu nome
+
+  - Crie uma constante chamada `meuNome` e atribua à ela o seu nome entre aspas simples (`''`).
+
+    ~~~javascript
+      const meuNome = 'Uener'
+    ~~~
+
+### Crie uma variável para guardar a sua idade
+
+  - Crie uma variável chamada `minhaIdade` e atribua à ela o número que representa a sua idade.
+
+    ~~~javascript
+    const minhaIdade = 39
+    ~~~
+
+### Corrija o código 💻
+  
+  - O seguinte código retorna um erro:
+
+    ~~~javascript
+      const email = email@trybe.com;
+      email = outroEmail@trybe.com;
+    ~~~
+
+  - Correção.
+
+    ~~~javascript
+      function corrigeCodigo() {
+        try {
+          let email = 'uenercoelho2@hotmail.com'
+          email = 'uenercoelhor@gmail.com'
+        }catch (e) {
+          return 'incorrect'
+        }
+        return 'correct'
+      }
+    ~~~
