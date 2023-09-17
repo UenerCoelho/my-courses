@@ -125,7 +125,7 @@
 
       <p align="center">
           <img alt="exemplo de variáveis" src=".github/primitivos.webp" width="100%" />
-        </p>
+      </p>
   
   ## Exercícios
 
