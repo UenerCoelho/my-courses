@@ -1,0 +1,70 @@
+/* Neste ponto zeramos o layout da pagina */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Neste ponto definimos o corpo da pagina */
+body {
+  font-family: Helvetica, Arial, sans-serif; /* font */
+  background-color: #222; /* Fundo do corpo da pagina */
+  color: #fff; /* Cor da font */
+  min-height: 100vh; /* Altura da pagina, neste caso, ocupa 100% da visualização */
+  background-image: url('../img/bg.jpg'); /* Imagem de fundo do corpo da pagina, pegamos de dentro da pasta do index */
+  background-size: cover; /* tamanho do fundo */
+  background-position: center; /* posição do fundo */
+  background-repeat: no-repeat; /* repetição do fundo, caso o tamanho da tela seja maior que a imagem de fundo */
+  display: flex; /* modo flex, nos permite manipular os elementos filho com propriedades novas */
+  flex-direction: column; /* modo de visualização do "display-flex", em colunas */
+  justify-content: space-between; /* alinhamento do conteúdo */
+}
+
+.middle {
+  width: 100%;
+  text-align: center;
+  text-shadow: 0px 0px 5px #777;
+}
+
+.middle h1 {
+  font-size: 120px;
+  font-weight: normal;
+}
+
+.middle h3 {
+  font-weight: normal;
+  font-size: 50px;
+}
+
+.bottom {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom .phrase {
+  text-align: center;
+  margin: 20px;
+  text-shadow: 0px 0px 5px #777;
+}
+
+.bottom .author {
+  overflow: hidden;
+  height: 0px;
+  transition: all ease 0.2s;
+}
+
+.bottom .phrase:hover .author {
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .middle h1 {
+    font-size: 80px;
+  }
+
+  .middle h3 {
+    font-size: 40px;
+  }
+}
