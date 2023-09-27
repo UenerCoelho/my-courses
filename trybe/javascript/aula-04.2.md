@@ -72,59 +72,66 @@
       console.log(verificaCidade);
     ~~~
 
-Vamos analisar o código:
+  - Vamos analisar o código:
 
-A variável cidade está recebendo o valor ‘Belo Horizonte’. Esse valor é uma string com ordem específica de caracteres;
-A variável verificaCidade está recebendo o resultado da comparação entre a variável cidade e a string ‘Belo Horizonte’, que retorna true, pois segue a mesma ordem de caracteres;
-Se você executar o console.log(verificaCidade), verá que o resultado no console será true.
+    * A variável `cidade` está recebendo o valor ‘Belo Horizonte’. Esse valor é uma `string` com ordem específica de caracteres;
+    * A variável `verificaCidade` está recebendo o resultado da comparação entre a variável `cidade` e a `string` ‘Belo Horizonte’, que retorna `true`, pois segue a mesma ordem de caracteres;
 
-Vamos analisar mais um exemplo:
+  - Se você executar o `console.log(verificaCidade)`, verá que o resultado no console será `true`.
 
-Copiar
-const idade = '45';
+  - Vamos analisar mais um exemplo:
 
-const verificaIdade = idade === 45;
+    ~~~js
+      const idade = '45';
 
-console.log(verificaIdade);
-O que você acha que será atribuído à variável verificaIdade: true ou false?
+      const verificaIdade = idade === 45;
 
-Se você respondeu true, não acertou, pois o que será atribuído à variável verificaIdade é false. Esse é um ponto muito importante, mas não se preocupe! Vamos às explicações.
+      console.log(verificaIdade);
+    ~~~
 
-Anota aí 📣: O operador === só compara valores do mesmo tipo primitivo. Com isso, você deve comparar uma string somente com outra string e um number somente com outro number.
+  - O que você acha que será atribuído à variável `verificaIdade`: `true` ou `false`?
 
-Copiar
-const banda = 'Iced Earth';
+  - Se você respondeu `true`, não acertou, pois o que será atribuído à variável `verificaIdade` é `false`. Esse é um ponto muito importante, mas não se preocupe! Vamos às explicações.
 
-const verificaBanda = banda === 'Iced Earth';
+  - Anota aí 📣: O operador `===` só compara valores do mesmo tipo primitivo. Com isso, você deve comparar uma `string` somente com outra `string` e um `number` somente com outro `number`.
 
-console.log(verificaBanda); // true
-Agora, veremos sobre o operador !==. Aperte os cintos e bora rumo a mais conhecimentos! 🚀
+    ~~~js
+      const banda = 'Iced Earth';
 
-É possível considerar o operador !== o oposto do operador ===, ou seja, !== é diferença estrita e === é igualdade estrita.
+      const verificaBanda = banda === 'Iced Earth';
 
-De olho na dica 👀 : Você pode chamar o operador !== de diferente de. Além disso, esse operador leva em consideração o tipo primitivo dos valores, assim como o operador ===.
+      console.log(verificaBanda); // true
+    ~~~
 
-Veja o exemplo:
+  - Agora, veremos sobre o operador `!==.` Aperte os cintos e bora rumo a mais conhecimentos! 🚀
 
-Copiar
-const nomeDoCachorro = 'Pipoca';
+  - É possível considerar o operador `!==` o oposto do operador `===,` ou seja, `!==` é diferença estrita e `===` é igualdade estrita.
 
-const verificaNomeCachorro = nomeDoCachorro !== 'Pipoca'; // o valor da variável nomeDoCachorro é diferente de Pipoca?
+    > __dica__: _Você pode chamar o operador `!==` de `diferente de`. Além disso, esse operador leva em consideração o tipo primitivo dos valores, assim como o operador `===.`_
 
-console.log(verificaNomeCachorro); // false
-Vamos analisar:
+  - Veja o exemplo:
 
-A variável verificaNomeCachorro está recebendo o resultado da comparação entre o valor da variável nomeDoCachorro com o valor ‘Pipoca’. Com isso, temos a seguinte pergunta: O valor da variável nomeDoCachorro é diferente de ‘Pipoca’?
-A resposta é: não, são valores iguais!
+    ~~~js
+      const nomeDoCachorro = 'Pipoca';
 
-Portanto, o valor da variável verificaNomeCachorro é false, porque não atendeu à comparação de diferença, sacou?
+      const verificaNomeCachorro = nomeDoCachorro !== 'Pipoca'; // o valor da variável nomeDoCachorro é diferente de Pipoca?
 
-Sendo assim, o que será impresso pelo console.log(verificaNomeCachorro); é false, pois os dois valores são iguais.
+      console.log(verificaNomeCachorro); // false
+    ~~~
 
-Anota aí 📣: O operador !== verifica se os valores são diferentes; desse modo, se um valor for diferente do outro, ele retorna true, e se for igual, retornará false.
+  - Vamos analisar:
+    * A variável `verificaNomeCachorro` está recebendo o resultado da comparação entre o valor da variável `nomeDoCachorro` com o valor ‘Pipoca’. Com isso, temos a seguinte pergunta: O valor da variável `nomeDoCachorro` é diferente de ‘Pipoca’?
 
-Operador > (maior que) e < (menor que)
-Chegou a hora de vermos sobre o operador >! Ele é utilizado quando queremos verificar se um valor é maior do que outro valor. Observe o exemplo a seguir, que compara a idade de uma pessoa com a classificação indicativa de um filme:
+  - A resposta é: não, são valores iguais!
+
+  - Portanto, o valor da variável `verificaNomeCachorro` é `false`, porque não atendeu à comparação de diferença, sacou?
+
+  - Sendo assim, o que será impresso pelo `console.log(verificaNomeCachorro)`; é `false`, pois os dois valores são iguais.
+
+    > __Dica__: _O operador `!==` verifica se os valores são diferentes; desse modo, se um valor for diferente do outro, ele retorna `true`, e se for igual, retornará `false`._
+
+  ## Operador > (maior que) e < (menor que)
+  - Chegou a hora de vermos sobre o operador >! Ele é utilizado quando queremos verificar se um valor é maior do que outro valor. Observe o exemplo a seguir, que compara a idade de uma pessoa com a classificação indicativa de um filme:
 
 Copiar
 const classificacaoIndicativa = 14;
