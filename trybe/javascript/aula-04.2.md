@@ -133,103 +133,129 @@
   ## Operador > (maior que) e < (menor que)
   - Chegou a hora de vermos sobre o operador >! Ele é utilizado quando queremos verificar se um valor é maior do que outro valor. Observe o exemplo a seguir, que compara a idade de uma pessoa com a classificação indicativa de um filme:
 
-Copiar
-const classificacaoIndicativa = 14;
+    ~~~js
+      const classificacaoIndicativa = 14;
 
-const idadeDaPessoa = 15;
+      const idadeDaPessoa = 15;
 
-const verificaIdade = idadeDaPessoa > classificacaoIndicativa;
+      const verificaIdade = idadeDaPessoa > classificacaoIndicativa;
 
-console.log(verificaIdade);
-Na expressão acima, você está comparando se a idadeDaPessoa é maior do que classificacaoIndicativa, e o resultado é true, pois a classificação indicativa do filme é de 14 anos, e a idadeDaPessoa é 15 anos, ou seja, 15 é maior que 14.
+      console.log(verificaIdade);
+    ~~~
 
-Caso a idadeDaPessoa seja maior do que a classificacaoIndicativa, o resultado atribuído a verificaIdade será true.
+  - Na expressão acima, você está comparando se a `idadeDaPessoa` é maior do que `classificacaoIndicativa`, e o resultado é `true`, pois a classificação indicativa do filme é de 14 anos, e a `idadeDaPessoa` é 15 anos, ou seja, 15 é maior que 14.
 
-Mas e se invertermos as variáveis na expressão de comparação? Veja o exemplo abaixo: ⬇️
+  - Caso a `idadeDaPessoa` seja maior do que a `classificacaoIndicativa`, o resultado atribuído a `verificaIdade` será `true`.
 
-Copiar
-const verificaIdade = classificacaoIndicativa > idadeDaPessoa;
-Agora, a comparação de valor traz a seguinte pergunta: classificacaoIndicativa é maior do que idadeDaPessoa? O valor atribuído a verificaIdade será false, pois a classificação é de 14 anos e a idade da pessoa é 15, ou seja, 14 não é maior que 15.
+  - Mas e se invertermos as variáveis na expressão de comparação? Veja o exemplo abaixo: ⬇️
 
-Relembrando 🧠 : Você vai utilizar o operador > quando desejar saber se um valor é maior que outro valor.
+    ~~~js
+      const verificaIdade = classificacaoIndicativa > idadeDaPessoa;
+    ~~~
 
-Vamos agora para o operador <, que significa menor que. Sua função é verificar se um valor é menor que outro valor.
+  - Agora, a comparação de valor traz a seguinte pergunta: `classificacaoIndicativa` é maior do que `idadeDaPessoa`? O valor atribuído a `verificaIdade` será `false`, pois a classificação é de 14 anos e a idade da pessoa é 15, ou seja, 14 não é maior que 15.
 
-Vamos usar o exemplo anterior, mas dessa vez trocando os operadores. Observe:
+  > __Dica__ : _Você vai utilizar o operador `>` quando desejar saber se um `valor` é maior que outro `valor`._
 
-Copiar
-const classificacaoIndicativa = 14;
+  - Vamos agora para o operador `<`, que significa `menor que`. Sua função é verificar se um valor é `menor que` outro valor.
 
-const idadeDaPessoa = 15;
+  - Vamos usar o exemplo anterior, mas dessa vez trocando os operadores. Observe:
 
-const verificaIdade = idadeDaPessoa < classificacaoIndicativa;
+    ~~~js
+      const classificacaoIndicativa = 14;
 
-console.log(verificaIdade);
-Nessa nova expressão, você está perguntando: “A idade da pessoa é menor do que a classificação indicativa?”, e a resposta impressa pelo console.log(verificaIdade); será false, pois a pessoa tem 15 anos e a classificação indicativa do filme é 14 anos, ou seja, 15 não é menor que 14.
+      const idadeDaPessoa = 15;
 
-De olho na dica 👀 : Lembre-se de que é possível construir a expressão de acordo com sua lógica, desde que siga a estrutura [valor] [operador] [valor]!
+      const verificaIdade = idadeDaPessoa < classificacaoIndicativa;
 
-Como vou conseguir lembrar que o operador > é maior e o < é menor? 🤔
+      console.log(verificaIdade);
+    ~~~
 
-Temos uma dica pra você: Observe que o símbolo de > parece o bico de um pássaro. Com isso você pode fazer a seguinte relação:
+  - Nessa nova expressão, você está perguntando: “A idade da pessoa é menor do que a classificação indicativa?”, e a resposta impressa pelo `console.log(verificaIdade)`; será `false`, pois a pessoa tem 15 anos e a classificação indicativa do filme é 14 anos, ou seja, 15 não é menor que 14.
 
-O pássaro maior > alimenta o pássaro menor;
-O pássaro menor < é alimentado pelo maior.
-Legal, né? 🦅
+  > __Dica__: _Lembre-se de que é possível construir a expressão de acordo com sua lógica, desde que siga a estrutura [valor] [operador] [valor]!_
 
-Operador >= (maior igual que) <= (menor igual que)
-Quando queremos saber se “um valor é maior ou igual a outro valor”, podemos utilizar o operador >=.
+  - Como vou conseguir lembrar que o operador `>` é maior e o `<` é menor?
 
-Veja o código abaixo:
+  - Temos uma dica pra você: Observe que o símbolo de `>` parece o bico de um pássaro. Com isso você pode fazer a seguinte relação:
 
-Copiar
-const idadeDaPessoa = 18;
+    * O pássaro maior > alimenta o pássaro menor;
+    * O pássaro menor < é alimentado pelo maior.
 
-const idadeMaioridade = 18;
+  ## Operador >= (maior igual que) <= (menor igual que)
+  - Quando queremos saber se “um valor é maior ou igual a outro valor”, podemos utilizar o operador >=.
 
-const verificaIdadeMaior = idadeDaPessoa > idadeMaioridade;
+  - Veja o código abaixo:
 
-const verificaIdadeMaiorOuIgual = idadeDaPessoa >= idadeMaioridade;
+    ~~~js
+      const idadeDaPessoa = 18;
 
-console.log(verificaIdadeMaior);
-console.log(verificaIdadeMaiorOuIgual);
-Nesse exemplo, foram declaradas duas variáveis - verificaIdadeMaior e verificaIdadeMaiorOuIgual -, que recebem, cada uma, o resultado de uma expressão. Vamos analisá-las:
+      const idadeMaioridade = 18;
 
-A primeira utiliza o operador >;
-A segunda utiliza o operador >=;
-As idades idadeDaPessoa e idadeMaioridade possuem o mesmo valor: 18.
-A diferença entre os dois resultados é a seguinte:
+      const verificaIdadeMaior = idadeDaPessoa > idadeMaioridade;
 
-Na variável verificaIdadeMaior, o valor atribuído é false, porque a pergunta é “18 é maior do que 18?”
-Na variável verificaIdadeMaiorOuIgual, o valor atribuído é true, porque a pergunta é “18 é maior ou igual a 18?” e neste caso é igual.
-Na expressão idadeDaPessoa >= idadeMaioridade, é possível dividi-la em duas perguntas menores e considerar que, se uma delas resultar em true, toda a expressão será considerada true. Vamos ao exemplo, para melhor compreensão:
+      const verificaIdadeMaiorOuIgual = idadeDaPessoa >= idadeMaioridade;
 
-A expressão:
+      console.log(verificaIdadeMaior);
+      console.log(verificaIdadeMaiorOuIgual);
+    ~~~
 
-“18 é maior ou igual do que 18?”
-Pode ser dividida nessas duas perguntas:
+  - Nesse exemplo, foram declaradas duas variáveis - `verificaIdadeMaior` e `verificaIdadeMaiorOuIgual` -, que recebem, cada uma, o resultado de uma expressão. Vamos analisá-las:
 
-“18 é maior do que 18?”
-“18 é igual a 18?”
-Caso o resultado de alguma das perguntas seja true, a expressão inteira é avaliada como true. Caso nenhuma delas seja avaliada como true, a expressão inteira é avaliada como false.
+    * A primeira utiliza o operador `>`;
+    * A segunda utiliza o operador `>=`;
+    * As idades `idadeDaPessoa` e `idadeMaioridade` possuem o mesmo valor: 18.
 
-Relembrando 🧠 : Você vai utilizar o operador >= quando desejar comparar se um valor é maior ou igual a outro valor.
+  - A diferença entre os dois resultados é a seguinte:
 
-Bacana, né? 🤩
+  - Na variável `verificaIdadeMaior`, o valor atribuído é `false`, porque a pergunta é “18 é maior do que 18?”
+  - Na variável `verificaIdadeMaiorOuIgual`, o valor atribuído é `true`, porque a pergunta é “18 é maior ou igual a 18?” e neste caso é igual.
+  - Na expressão `idadeDaPessoa >= idadeMaioridade`, é possível dividi-la em duas perguntas menores e considerar que, se uma delas resultar em `true`, toda a expressão será considerada `true`. Vamos ao exemplo, para melhor compreensão:
 
-O operador <=, chamado de menor que, funciona de maneira similar. Vamos aplicá-lo no mesmo exemplo e analisar o resultado:
+  - A expressão:
 
-Copiar
-const idadeDaPessoa = 18;
+    * “18 é maior ou igual do que 18?”
+  
+  - Pode ser dividida nessas duas perguntas:
 
-const idadeMaioridade = 18;
+    * “18 é maior do que 18?”
+    * “18 é igual a 18?”
+  
+  - Caso o resultado de alguma das perguntas seja `true`, a expressão inteira é avaliada como `true`. Caso nenhuma delas seja avaliada como `true`, a expressão inteira é avaliada como `false`.
 
-const verificaIdade = idadeDaPessoa <= idadeMaioridade;
+  > __Dica__: _Você vai utilizar o operador `>=` quando desejar comparar se um `valor` é maior ou igual a outro `valor`._
 
-console.log(verificaIdade);
-A expressão é: “A idadeDaPessoa é menor ou igual a idadeMaioridade?”. Caso uma delas seja avaliada como true, toda a expressão vai resultar em true.
+  - O operador `<=`, chamado de `menor que`, funciona de maneira similar. Vamos aplicá-lo no mesmo exemplo e analisar o resultado:
 
-Anota aí 📣:
+  ~~~js
+    const idadeDaPessoa = 18;
 
-Você vai utilizar o operador >= quando desejar comparar se um valor é maior ou igual a outro valor;
-Você vai utilizar o operador <= quando desejar comparar se um valor é menor ou igual a outro valor.
+    const idadeMaioridade = 18;
+
+    const verificaIdade = idadeDaPessoa <= idadeMaioridade;
+
+    console.log(verificaIdade);
+  ~~~
+
+  - A expressão é: “A `idadeDaPessoa` é menor ou igual a `idadeMaioridade`?”. Caso uma delas seja avaliada como `true`, toda a expressão vai resultar em `true`.
+
+  > __Dica__:
+    * _Você vai utilizar o operador `>=` quando desejar comparar se um `valor` é maior ou igual a outro `valor`;_
+    * _Você vai utilizar o operador `<=` quando desejar comparar se um `valor` é menor ou igual a outro `valor`._
+  
+# Exercícios
+
+  ### Crie e compare variáveis: É menor, maior ou igual? 🤔
+   - Imagine que você precisa comprar duas peças de roupa, entretanto, após o pagamento de suas contas, você tem somente R$ 60,00 reais para gastar.
+
+   - Faça um algoritmo para verificar se as duas peças de que precisa, caberão no seu orçamento.
+
+      __a.__ Crie duas variáveis `roupa1` e `roupa2`:
+        * Na variável chamada de `roupa1`, você vai adicionar o valor 35;
+          * Na variável chamada de `roupa2`, você vai adicionar o valor 20;
+
+      __b.__ Crie a variável `compras`:
+        * Atribua a ela o valor da soma entre `roupa1` e `roupa2`;
+
+      __c.__ Crie uma variável chamada `orcamento`:
+        * Verifique se `compras` é menor ou igual a `60` e atribua o retorno a variável `orcamento`.
