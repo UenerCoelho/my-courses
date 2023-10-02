@@ -17,3 +17,12 @@ let values = [1, 5, 10]
 console.log('n3: ' + n3)
 console.log(p3)
 console.log(sum(...values))
+
+// Puxando do HTML
+const objs = document.getElementsByTagName('div')
+console.log(objs)
+const objs1 = [...document.getElementsByTagName('div')]
+objs1.forEach(element => {
+  console.log(element)
+})
+console.log(objs1)
