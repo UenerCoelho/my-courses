@@ -5,7 +5,7 @@ if (num > 10) {
   // Aninhamento de IF
   if (num > 50) {
     console.log('numeral maior que 50')
-    if (num < 100) {
+    if (num < 100 && num > 55) {
       console.log('numeral menor que 100')
     }
   }
