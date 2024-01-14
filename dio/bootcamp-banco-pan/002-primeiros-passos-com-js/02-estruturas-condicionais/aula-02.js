@@ -1,14 +1,7 @@
 const num = 3
-// const num2 = num % 2 === 0
-
-// if (num2) {
-//   console.log('Par')
-// } else {
-//   console.log('Impar')
-// }
-
 const divisor = 5
 const numDividedBy = num % divisor === 0
+
 if (numDividedBy === 0) {
   console.log('Número Inválido!')
 } else if (numDividedBy) {
