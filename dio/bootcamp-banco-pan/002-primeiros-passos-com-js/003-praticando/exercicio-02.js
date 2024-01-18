@@ -16,9 +16,9 @@
 
 const personName = 'Uener'
 const weight = 150
-const width = 1.84
-// const imc = weight / (width * width)
-const imc = weight / Math.pow(width, 2)
+const height = 1.84
+// const imc = weight / (height * height)
+const imc = weight / Math.pow(height, 2)
 
 if (imc < 18.5) {
   console.log(
