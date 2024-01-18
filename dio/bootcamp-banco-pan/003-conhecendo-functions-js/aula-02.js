@@ -22,13 +22,12 @@ function imcClassification(imc, personName) {
   }
 }
 
-function main() {
+//Main
+;(function () {
   const personName = 'Uener'
   const weight = 150
   const height = 1.84
   const imc = imcCalculation(weight, height)
 
   console.log(imcClassification(imc, personName))
-}
-
-main()
+})()
