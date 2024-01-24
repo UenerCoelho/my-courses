@@ -10,7 +10,7 @@
       debit: 1,
       pix: 2
     },
-    checkout: this.checkoutWays[debit],
+    // checkout: this.checkoutWays[debit],
 
     debit: function () {
       return this.price - this.price * (this.debitDiscount / 100)
@@ -30,12 +30,13 @@
       return price + overTwice()
     }
   }
-  if (cartShop.checkout == debit) {
-    console.log(
-      'Pagamento no Débito, você pagará ' +
-        debit() +
-        ', Desconto de 10%, de um total de R$' +
-        cartShop.price
-    )
-  }
+  // if (cartShop.checkout == debit) {
+  //   console.log(
+  //     'Pagamento no Débito, você pagará ' +
+  //       debit() +
+  //       ', Desconto de 10%, de um total de R$' +
+  //       cartShop.price
+  //   )
+  // }
+  console.log(pix())
 })()
