@@ -30,7 +30,7 @@ if (imc < 18.5) {
   )
 } else if (imc > 25 && imc <= 30) {
   console.log(
-    `${personName} seu IMC é: ${imc.toFixed(2)}, você está Acima ddo Peso.`
+    `${personName} seu IMC é: ${imc.toFixed(2)}, você está Acima do Peso.`
   )
 } else if (imc > 30 && imc <= 40) {
   console.log(`${personName} seu IMC é: ${imc.toFixed(2)}, você é Obeso.`)
