@@ -13,8 +13,9 @@
 */
 const { gets, print } = require('./exercises-functions-01')
 
+const studentsQuantity = gets()
 const sortedNumbers = []
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < studentsQuantity; i++) {
   const sortedNumber = gets()
   sortedNumbers.push(sortedNumber)
 }
