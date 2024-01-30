@@ -29,3 +29,14 @@ for (let i = 0; i < sortedNumbers.length; i++) {
 }
 
 print(highestValue)
+
+// Outro jeito de fazer o código acima
+// let highestValueFounded = 0
+// for (let index = 0; index < 5; index++) {
+//   const sortedNum = gets()
+//   if (sortedNum > highestValueFounded) {
+//     highestValueFounded = sortedNum
+//   }
+// }
+
+// print(highestValueFounded)
