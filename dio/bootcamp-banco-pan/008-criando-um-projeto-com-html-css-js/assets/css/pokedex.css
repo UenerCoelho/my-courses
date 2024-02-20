@@ -113,6 +113,25 @@
   align-self: flex-end;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.pagination button {
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  background-color: #6c79db;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.625rem;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 992px) {
   .content {
     max-width: 992px;
