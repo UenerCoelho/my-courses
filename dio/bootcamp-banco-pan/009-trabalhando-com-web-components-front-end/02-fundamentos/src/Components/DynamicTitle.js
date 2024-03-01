@@ -4,18 +4,19 @@ class DynamicTitle extends HTMLElement {
 
     const shadow = this.attachShadow({ mode: 'open' })
 
-    // component base
+    // Component base
     const componentRoot = document.createElement('h1')
-    componentRoot.textContent = this.getAttribute('titulo')
+    componentRoot.textContent = this.getAttribute('title-attr')
 
-    // component style
+    // Component style
     const style = document.createElement('style')
     style.textContent = `
-    h1{
-      color: blue;
-    }`
+      h1 {
+        color: blue;
+      }
+    `
 
-    // sent to shadow
+    // Adicionando ao shadow DOM
     shadow.appendChild(componentRoot)
     shadow.appendChild(style)
   }
