@@ -3,11 +3,11 @@ type Hero = {
   vulgo: string;
 };
 
-function printObjects(person: Hero){
+function printObject(person: Hero){
   console.log(person)
 }
 
-printObjects({
+printObject({
   name: 'Bruce Wayne',
   vulgo: 'Batman',
 });
