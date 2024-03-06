@@ -1,0 +1,1 @@
+let infos: (string | number | boolean)[] = ["Uener", 30, true, "Catia", "gosta de sexo", false]
