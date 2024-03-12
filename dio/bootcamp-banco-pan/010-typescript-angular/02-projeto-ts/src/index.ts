@@ -1,14 +1,14 @@
-type Hero = {
-  name: string;
-  vulgo: string;
-};
+// type Hero = {
+//   name: string;
+//   vulgo: string;
+// };
 
-function printObject(person: Hero){
-  console.log(person)
-}
+// function printObject(person: Hero){
+//   console.log(person)
+// }
 
-printObject({
-  name: 'Bruce Wayne',
-  vulgo: 'Batman',
-});
+// printObject({
+//   name: 'Bruce Wayne',
+//   vulgo: 'Batman',
+// });
 
