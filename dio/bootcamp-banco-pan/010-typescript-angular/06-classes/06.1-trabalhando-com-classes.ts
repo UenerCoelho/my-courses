@@ -1,5 +1,5 @@
 class Character {
-  name: string;
+  name?: string;
   strength: number;
   skill: number;
 
@@ -14,5 +14,16 @@ class Character {
   }
 }
 
-const player1 = new Character('Uener', 10, 98)
+// SubClasse
+class Magician extends Character {
+  magicPoints: number
+  constructor(name: string, strength: number, skill: number, magicPoints: number){
+    super(name, strength, skill)
+    this.magicPoints = magicPoints
+  }
+}
+
+const player1 = new Character('Ryu', 10, 98)
+const player2 = new Magician('Leona', 10, 98, 100)
 console.log(player1)
+console.log(player2)

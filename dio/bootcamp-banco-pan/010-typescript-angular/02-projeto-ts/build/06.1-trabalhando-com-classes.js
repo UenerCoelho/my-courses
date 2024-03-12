@@ -9,5 +9,14 @@ class Character {
         console.log(`Attack with ${this.strength} points`);
     }
 }
-const player1 = new Character('Uener', 10, 98);
+// SubClasse
+class Magician extends Character {
+    constructor(name, strength, skill, magicPoints) {
+        super(name, strength, skill);
+        this.magicPoints = magicPoints;
+    }
+}
+const player1 = new Character('Ryu', 10, 98);
+const player2 = new Magician('Leona', 10, 98, 100);
 console.log(player1);
+console.log(player2);
