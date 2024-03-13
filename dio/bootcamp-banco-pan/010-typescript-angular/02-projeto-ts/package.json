@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "npx tsc && node build/index.js",
+    "start-dev": "ts-node-dev --respawn --transpile-only src/07.2-generics-na-pratica.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   }
 }
