@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc && node build/06.1-trabalhando-com-classes.js",
+    "start": "npx tsc && node build/07.1generics.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
