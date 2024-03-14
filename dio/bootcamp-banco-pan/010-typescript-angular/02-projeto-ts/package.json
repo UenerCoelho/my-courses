@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx tsc && node build/index.js",
-    "start-dev": "ts-node-dev --respawn --transpile-only src/07.2-generics-na-pratica.ts",
+    "start-dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
