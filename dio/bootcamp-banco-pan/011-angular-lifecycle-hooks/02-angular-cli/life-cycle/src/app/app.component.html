@@ -2,5 +2,7 @@
 
 <app-title name="Uener"></app-title>
 <app-title name="Catia"></app-title>
+<app-check-sample *ngIf="isAliveCheckSample"></app-check-sample>
+<button (click)="disposeCheckSample()">Destruir Componente</button>
 
 <router-outlet></router-outlet>
