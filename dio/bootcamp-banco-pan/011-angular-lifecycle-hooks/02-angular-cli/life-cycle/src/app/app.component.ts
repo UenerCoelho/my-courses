@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'life-cycle';
 	isAliveCheckSample:boolean = true
 
-	disposeCheckSample():void{
+	disposeCheckSample():void {
 		this.isAliveCheckSample = false
 	}
 }
