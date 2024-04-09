@@ -1,3 +1,8 @@
 <app-card *ngIf="isAliveCard"></app-card>
+<!-- <app-card *ngIf="isAliveCard; else #secretBlock"></app-card> -->
+
+<ng-template #secretBlock>
+  <p>Bloco Secreto</p>
+</ng-template>
 
 <router-outlet></router-outlet>
