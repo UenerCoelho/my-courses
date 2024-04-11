@@ -12,3 +12,25 @@
     {{ i }} - {{ p }}
   </li>
 </ul>
+
+<div [ngSwitch]="menuType">
+  <div *ngSwitchDefault="">
+    <li>editar perfil</li>
+    <li>adicionar cartão</li>
+  </div>
+  <div *ngSwitchCase="'user'">
+    <li>editar perfil</li>
+    <li>adicionar cartão</li>
+  </div>
+  <div *ngSwitchCase="'admin'">
+    <li>editar perfil</li>
+    <li>adicionar cartão</li>
+    <li>gerenciar usuários</li>
+  </div>
+  <div *ngSwitchCase="'superUser'">
+    <li>editar perfil</li>
+    <li>adicionar cartão</li>
+    <li>gerenciar usuários</li>
+    <li>gerenciar admins</li>
+  </div>
+</div>
