@@ -3,5 +3,12 @@
 <button>Botão</button>
 
 <ul>
-  <li *ngFor="let p of produtos">{{ p }}</li>
+  <button (click)="adicionar()">Adicionar</button>
+  <br />
+  <button (click)="removerButton()">Remover</button>
+  <br />
+  <br />
+  <li *ngFor="let p of produtos; let i = index" (click)="remover(i)">
+    {{ i }} - {{ p }}
+  </li>
 </ul>

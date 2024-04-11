@@ -20,4 +20,15 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  adicionar(){
+    this.produtos.push('Uener')
+  }
+  remover(index: number){
+    alert(index)
+    this.produtos.splice(index, 1)
+  }
+  removerButton(){
+    this.produtos.pop()
+  }
+
 }
