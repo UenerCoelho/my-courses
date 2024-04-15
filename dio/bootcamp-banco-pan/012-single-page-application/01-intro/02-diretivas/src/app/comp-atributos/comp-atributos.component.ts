@@ -11,6 +11,7 @@ export class CompAtributosComponent implements OnInit {
   corFonte:string = 'white'
   item:string = ''
   lista:string [] = []
+  isEnableBlock:boolean = false
 
   constructor() { }
   adicionarLista(){

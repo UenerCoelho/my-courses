@@ -9,3 +9,12 @@
 <p>{{ item }}</p>
 
 <hr />
+
+<ng-template [ngIf]="isEnableBlock">
+  <a href="#">Finalizar Compra</a>
+</ng-template>
+<br />
+<br />
+<ng-template [ngIf]="true">
+  <a href="#">Adicionar ao Carrinho</a>
+</ng-template>
