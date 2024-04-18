@@ -26,4 +26,5 @@
 
 .big-card__description > p {
   color: gray;
+  text-align: justify;
 }
