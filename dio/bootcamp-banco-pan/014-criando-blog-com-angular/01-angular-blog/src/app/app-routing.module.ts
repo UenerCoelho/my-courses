@@ -8,7 +8,7 @@ const routes: Routes = [
     path:'',
     component:HomeComponent
   },
-  {path:'content',
+  {path:'content/:Id',
     component:ContentComponent
   }
 ];
