@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  @Input()
+  contentCover:string = '../../../assets/img/placeholder-img.png'
+  @Input()
+  contentTitle:string = 'Título da notícia'
+  @Input()
+  contentDescription:string = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae voluptatibus quis sint esse consectetur rem inventore iusto ullam ab commodi quod, eum consequatur natus quo deleniti nulla ipsam, amet blanditiis.'
 
   constructor() { }
 

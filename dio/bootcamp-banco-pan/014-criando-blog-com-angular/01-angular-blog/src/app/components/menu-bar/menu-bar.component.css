@@ -1,3 +1,7 @@
+.container__menu-bar {
+  display: flex;
+  /* justify-content: space-between; */
+}
 .container__menu-bar > ul {
   display: flex;
   flex-direction: row;
