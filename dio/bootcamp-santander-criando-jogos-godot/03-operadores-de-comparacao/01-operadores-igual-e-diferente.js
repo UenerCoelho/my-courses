@@ -14,5 +14,6 @@ let cpfLocked = '123.456.789-00'
 let userCPF = '001.234.567-89'
 let blockedUser = cpfLocked === userCPF
 console.log('O usuário está barrado? ' + blockedUser)
+
 blockedUser = cpfLocked !== userCPF
 console.log('O usuário está barrado? ' + blockedUser)
