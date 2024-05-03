@@ -11,3 +11,6 @@ console.log('O tempo é diferente de "chuva"? ' + result)
 
 result = !(tempo !== 'chuva') && hora > 6
 console.log('O tempo é diferente de "chuva"? ' + result)
+
+console.log(true && false)
+console.log(true || false)
