@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="01-first-project"
-run/main_scene="res://first-project-hello-world.tscn"
+config/name="First-Xp-Godot"
+run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
-project/assembly_name="01-first-project"
+project/assembly_name="First-Xp-Godot"
