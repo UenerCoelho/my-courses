@@ -1,20 +1,65 @@
-[gd_scene format=3 uid="uid://dbn3vto7tssqi"]
+[gd_scene load_steps=5 format=3 uid="uid://dbn3vto7tssqi"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_rg32h"]
+[ext_resource type="PackedScene" uid="uid://ck1qhclnibs2b" path="res://objects/regular-box.tscn" id="1_s1ykd"]
+[ext_resource type="PackedScene" uid="uid://cadfpm1tyhk82" path="res://objects/bouncy-box.tscn" id="2_ovigd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ictlx"]
+size = Vector2(1152, 64)
 
 [node name="World" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_rg32h")
+object_templates = Array[PackedScene]([ExtResource("1_s1ykd"), ExtResource("2_ovigd")])
+
 [node name="Background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1150, 625)
 offset_right = 1152.0
-offset_bottom = 644.0
-color = Color(0.286275, 0.67451, 1, 1)
+offset_bottom = 648.0
+color = Color(0.313726, 0.65098, 1, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 2.0
-offset_top = 604.0
-offset_right = 1152.0
-offset_bottom = 644.0
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="ColorRect3" type="ColorRect" parent="."]
-offset_left = 520.0
-offset_top = 212.0
-offset_right = 560.0
-offset_bottom = 252.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 616)
+shape = SubResource("RectangleShape2D_ictlx")
+
+[node name="Ground" type="ColorRect" parent="StaticBody2D/CollisionShape2D"]
+custom_minimum_size = Vector2(1150, 0)
+offset_left = -576.0
+offset_top = -30.0
+offset_right = 576.0
+offset_bottom = 32.0
+color = Color(0.360784, 0.572549, 0.192157, 1)
+
+[node name="Regular Box" parent="." instance=ExtResource("1_s1ykd")]
+position = Vector2(561, 304)
+
+[node name="Regular Box2" parent="." instance=ExtResource("1_s1ykd")]
+position = Vector2(620, 117)
+
+[node name="Regular Box3" parent="." instance=ExtResource("1_s1ykd")]
+position = Vector2(505, 451)
+
+[node name="Regular Box4" parent="." instance=ExtResource("1_s1ykd")]
+position = Vector2(565, 38)
+
+[node name="Regular Box5" parent="." instance=ExtResource("1_s1ykd")]
+position = Vector2(558, 528)
+rotation = -3.00528
+
+[node name="Bouncy Box" parent="." instance=ExtResource("2_ovigd")]
+position = Vector2(529, 158)
+
+[node name="Bouncy Box2" parent="." instance=ExtResource("2_ovigd")]
+position = Vector2(567, 377)
+
+[node name="Bouncy Box3" parent="." instance=ExtResource("2_ovigd")]
+position = Vector2(463, 538)
+
+[node name="Bouncy Box4" parent="." instance=ExtResource("2_ovigd")]
+position = Vector2(636, 40)
+
+[node name="Bouncy Box5" parent="." instance=ExtResource("2_ovigd")]
+position = Vector2(601, 213)
