@@ -1,5 +1,6 @@
-[gd_scene load_steps=40 format=3 uid="uid://cqx1t8qq0ywph"]
+[gd_scene load_steps=41 format=3 uid="uid://cqx1t8qq0ywph"]
 
+[ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="1_oc1s8"]
 [ext_resource type="Texture2D" uid="uid://1ihwga7lga8" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="2_rib7e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5s4n2"]
@@ -293,13 +294,13 @@ height = 52.0
 
 [node name="Pawn" type="CharacterBody2D"]
 motion_mode = 1
+script = ExtResource("1_oc1s8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-12, -29)
 sprite_frames = SubResource("SpriteFrames_oghmb")
-animation = &"commemoration_1"
-autoplay = "idle"
-frame_progress = 0.72795
+animation = &"run"
+autoplay = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-12, -29)

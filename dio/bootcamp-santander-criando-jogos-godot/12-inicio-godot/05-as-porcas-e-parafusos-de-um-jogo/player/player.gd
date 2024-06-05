@@ -12,6 +12,8 @@ var is_attacking: bool = false
 var attack_cooldown: float = 0.0
 
 func _process(delta: float) -> void:
+	
+	GameManager.player_position = position
 	# Ler o Input
 	read_input()
 	# tocar animação
