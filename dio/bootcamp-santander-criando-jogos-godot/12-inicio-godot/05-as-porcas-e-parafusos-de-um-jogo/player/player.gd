@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 3
+@export var sword_damage: int = 1
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -19,8 +20,15 @@ func _process(delta: float) -> void:
 	# tocar animação
 	play_run_idle_animation()
 	# Attack
-	if Input.is_action_just_pressed("attack"):
-		attack()
+	if Input.is_action_just_pressed("attack_1"):
+		attack_1()
+	elif Input.is_action_just_pressed("attack_2"):
+		attack_2()
+	elif Input.is_action_just_pressed("attack_3"):
+		attack_3()
+	elif Input.is_action_just_pressed("attack_4"):
+		attack_4()
+		
 	update_attack_cooldown(delta)
 
 func read_input() -> void:
@@ -68,13 +76,22 @@ func update_attack_cooldown(delta: float) -> void:
 			is_running = false
 			animation_player.play("idle")
 
-func attack() -> void:
-	
+func attack_1() -> void:
+	if is_attacking:
+		return
+	# Tocar Animação
+	animation_player.play("atk_side_1")
+	# Config do Temporizador
+	attack_cooldown = 0.6
+	#Marcar Ataque
+	is_attacking = true
+
+func attack_2() -> void:
 	if is_attacking:
 		return
 		
 	# Tocar Animação
-	animation_player.play("atk_side_1")
+	animation_player.play("atk_side_2")
 	
 	# Config do Temporizador
 	attack_cooldown = 0.6
@@ -82,8 +99,34 @@ func attack() -> void:
 	#Marcar Ataque
 	is_attacking = true
 
+func attack_3() -> void:
+	if is_attacking:
+		return
 	# Tocar Animação
+	animation_player.play("atk_up_1")
+	# Config do Temporizador
+	attack_cooldown = 0.6
+	#Marcar Ataque
+	is_attacking = true
 
+func attack_4() -> void:
+	if is_attacking:
+		return
+	# Tocar Animação
+	animation_player.play("atk_down_1")
+	# Config do Temporizador
+	attack_cooldown = 0.6
+	#Marcar Ataque
+	is_attacking = true
+
+func deal_damage_to_enemies() -> void:
+	# Acessar todos o inimigos
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	# Chamar a Função Damage
+		# Com sword_damage como primeiro parâmetro
+	for enemy in enemies:
+		enemy.damage(sword_damage)
+	
 func play_run_idle_animation() -> void:
 	if not is_attacking:
 		if was_running != is_running:

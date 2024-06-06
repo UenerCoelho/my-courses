@@ -1,12 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://y2417cxalp12"]
 
-[ext_resource type="Texture2D" path="res://assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_terci"]
+[ext_resource type="Texture2D" uid="uid://b5fvr50do67ox" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_ynkqk"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="WarriorBlue" type="Sprite2D" parent="."]
 position = Vector2(1794, 835)
-texture = ExtResource("1_terci")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 2369.0
@@ -86,3 +85,7 @@ offset_top = 59.0
 offset_right = 2314.0
 offset_bottom = 118.0
 text = "0 1 2 3 4 5"
+
+[node name="WarriorBlue2" type="Sprite2D" parent="."]
+position = Vector2(1773, 844)
+texture = ExtResource("1_ynkqk")
