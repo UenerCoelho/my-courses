@@ -10,3 +10,24 @@ position = Vector2(104, 398)
 
 [node name="Pawn" parent="." instance=ExtResource("2_wyi32")]
 position = Vector2(1053, 388)
+
+[node name="Pawn2" parent="." instance=ExtResource("2_wyi32")]
+position = Vector2(962, 181)
+
+[node name="Pawn3" parent="." instance=ExtResource("2_wyi32")]
+position = Vector2(960, 587)
+
+[node name="Pawn4" parent="." instance=ExtResource("2_wyi32")]
+position = Vector2(1171, 706)
+
+[node name="Pawn5" parent="." instance=ExtResource("2_wyi32")]
+position = Vector2(1692, 163)
+
+[node name="Pawn6" parent="." instance=ExtResource("2_wyi32")]
+position = Vector2(1434, 286)
+
+[node name="Pawn7" parent="." instance=ExtResource("2_wyi32")]
+position = Vector2(1319, 153)
+
+[node name="Pawn8" parent="." instance=ExtResource("2_wyi32")]
+position = Vector2(1579, 497)
