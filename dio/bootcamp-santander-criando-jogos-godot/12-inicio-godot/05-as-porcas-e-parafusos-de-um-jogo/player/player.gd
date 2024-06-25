@@ -1,17 +1,23 @@
+class_name Player
 extends CharacterBody2D
 
 @export var speed: float = 3
 @export var sword_damage: int = 1
+@export var health: int = 100
+@export var max_health: int = 100
+@export var death_prefab: PackedScene
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_area: Area2D = $SwordArea
+@onready var hitbox_area: Area2D = $HitBoxArea2D
 
 var input_vector: Vector2 = Vector2(0,0)
 var is_running: bool = false
 var was_running: bool = false
 var is_attacking: bool = false
 var attack_cooldown: float = 0.0
+var hitbox_cooldown: float = 0.0
 
 func _process(delta: float) -> void:
 	
@@ -33,6 +39,8 @@ func _process(delta: float) -> void:
 	update_attack_cooldown(delta)
 	if not is_attacking:
 		rotate_sprite()
+	
+	update_hitbox_detection(delta)
 
 func read_input() -> void:
 	# Obter o Input_vector
@@ -141,3 +149,49 @@ func play_run_idle_animation() -> void:
 			else:
 				animation_player.play("idle")
 
+func damage(amount: int) -> void:
+	if health <= 0: return
+	health -= amount
+	print("Cura Recebida de ", amount, ". Vida restante restante do Player é de: ", health,"/", max_health,"!")	
+	#print("Dano Recebid de ", amount, ". Vida restante restante do Player é de: ", health,"!")
+	
+	
+	# Piscar Node
+	modulate = Color.DARK_RED
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUINT).tween_property(self, "modulate", Color.WHITE, 0.3)
+	
+	# Processar Morte
+	if health <= 0:
+		die()
+
+func die() -> void:
+	if death_prefab:
+		var death_object = death_prefab.instantiate()
+		death_object.position = position
+		get_parent().add_child(death_object)
+		
+	queue_free()
+
+func update_hitbox_detection(delta: float) -> void:
+	# Temporizador
+	hitbox_cooldown -= delta
+	if hitbox_cooldown > 0: return
+	# Frequencia
+	hitbox_cooldown = 0.5
+	 
+	# Detectar inimigos
+	var bodies = hitbox_area.get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("enemies"):
+			var enemy: Enemy = body
+			var damage_amount = 1
+			damage(damage_amount)
+
+func heal(amount: int) -> int:
+	health += amount
+	if health > max_health:
+		health = max_health
+	return health
+	
+	

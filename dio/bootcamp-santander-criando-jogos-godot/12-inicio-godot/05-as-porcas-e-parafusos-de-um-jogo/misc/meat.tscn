@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmfi2wa3j5py7"]
+
+[ext_resource type="Texture2D" uid="uid://dng1pr2o734vm" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Resources/Resources/M_Spawn.png" id="1_m1dpd"]
+[ext_resource type="Script" path="res://misc/life_regenerator.gd" id="2_pvlh1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5pkb"]
+atlas = ExtResource("1_m1dpd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ix0l"]
+atlas = ExtResource("1_m1dpd")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irjmn"]
+atlas = ExtResource("1_m1dpd")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f32lm"]
+atlas = ExtResource("1_m1dpd")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rmcf"]
+atlas = ExtResource("1_m1dpd")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf3cb"]
+atlas = ExtResource("1_m1dpd")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nijqp"]
+atlas = ExtResource("1_m1dpd")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4b8c2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5pkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ix0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irjmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f32lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rmcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf3cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nijqp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2v64b"]
+radius = 18.9736
+height = 55.0224
+
+[node name="Meat" type="AnimatedSprite2D"]
+position = Vector2(0, -33)
+sprite_frames = SubResource("SpriteFrames_4b8c2")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0
+script = ExtResource("2_pvlh1")
+regeneration_amount = null
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 1)
+rotation = 1.25081
+shape = SubResource("CapsuleShape2D_2v64b")
