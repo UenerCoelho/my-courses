@@ -446,7 +446,6 @@ debug_color = Color(0.462745, 0.0627451, 0.337255, 0.419608)
 
 [node name="Player" parent="." instance=ExtResource("1_2vv78")]
 y_sort_enabled = true
-position = Vector2(576, 330)
 
 [node name="RemoteTransform2D - Camera" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -459,7 +458,6 @@ update_rotation = false
 update_scale = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 330)
 
 [node name="Trees" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -628,13 +626,10 @@ position = Vector2(1914, -855)
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_b5k4y")]
 y_sort_enabled = true
-position = Vector2(576, 330)
+position = Vector2(0, 0)
 
 [node name="DifficultySystem" type="Node2D" parent="." node_paths=PackedStringArray("mob_spawner")]
 script = ExtResource("30_7xiy3")
 mob_spawner = NodePath("../MobSpawner")
-intial_spawn_rate = 30.0
-spawn_rate_per_minute = 60
-break_intensity = 2.0
 
 [node name="GameUI" parent="." instance=ExtResource("3_rqvdo")]

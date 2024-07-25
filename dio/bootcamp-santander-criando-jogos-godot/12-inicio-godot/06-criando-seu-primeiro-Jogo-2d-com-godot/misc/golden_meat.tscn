@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca2sxrj2y7ekh"]
+
+[ext_resource type="PackedScene" uid="uid://djbg0mm1ruq0t" path="res://misc/meat.tscn" id="1_wpdbx"]
+
+[node name="Meat" instance=ExtResource("1_wpdbx")]
+self_modulate = Color(2.5, 1.5, 0, 1)
+regeneration_amount = 100

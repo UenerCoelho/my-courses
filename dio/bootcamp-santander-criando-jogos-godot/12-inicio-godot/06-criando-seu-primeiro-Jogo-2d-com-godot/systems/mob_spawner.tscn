@@ -15,6 +15,7 @@ point_count = 5
 position = Vector2(576, 338)
 script = ExtResource("1_8krge")
 creatures = Array[PackedScene]([ExtResource("2_yjtk5"), ExtResource("3_vua3o"), ExtResource("4_5ixyr")])
+mobs_per_minute = 120.0
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_5vj1p")
