@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://c62jdhwcm4x8f"]
+[gd_scene load_steps=13 format=3 uid="uid://c62jdhwcm4x8f"]
 
 [ext_resource type="Texture2D" uid="uid://ce2maovkjakw0" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_c4ppa"]
+[ext_resource type="Script" path="res://ui/game_over_ui.gd" id="1_ye0ew"]
 [ext_resource type="Texture2D" uid="uid://dojy45wwy02yw" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_skxxl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1jxx3"]
@@ -40,6 +41,45 @@ font_weight = 999
 font = SubResource("SystemFont_pm3vd")
 font_size = 24
 font_color = Color(0, 0, 0, 0.945098)
+
+[sub_resource type="Animation" id="Animation_ajig0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.541176)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(350, 21)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BottomPanel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(328.5, 501)]
+}
 
 [sub_resource type="Animation" id="Animation_4dtm5"]
 resource_name = "default"
@@ -81,45 +121,6 @@ tracks/2/keys = {
 "values": [Vector2(328.5, 680), Vector2(328.5, 501)]
 }
 
-[sub_resource type="Animation" id="Animation_ajig0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Background:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0.541176)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TopPanel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(350, 21)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("BottomPanel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(328.5, 501)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q21qy"]
 _data = {
 "RESET": SubResource("Animation_ajig0"),
@@ -127,6 +128,7 @@ _data = {
 }
 
 [node name="GameOverUI" type="CanvasLayer"]
+script = ExtResource("1_ye0ew")
 
 [node name="Background" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -134,16 +136,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 0.541176)
 
 [node name="TopPanel" type="Panel" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -226.0
-offset_top = -137.0
+offset_top = 21.0
 offset_right = 223.0
-offset_bottom = -23.0
+offset_bottom = 135.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1jxx3")
 
@@ -170,9 +172,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -247.5
-offset_top = 32.0
+offset_top = -147.0
 offset_right = 247.5
-offset_bottom = 175.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_1iasb")
