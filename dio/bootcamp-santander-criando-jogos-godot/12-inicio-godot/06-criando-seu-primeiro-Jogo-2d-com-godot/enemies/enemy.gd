@@ -51,6 +51,9 @@ func die() -> void:
 	# Drop
 	if randf() <= drop_chance:
 		drop_item()
+	
+	GameManager.monsters_defeated_counter += 1
+	
 	queue_free()
 
 func drop_item() -> void:

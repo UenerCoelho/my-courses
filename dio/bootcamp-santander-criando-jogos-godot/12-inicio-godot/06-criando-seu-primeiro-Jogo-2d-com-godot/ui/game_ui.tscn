@@ -7,6 +7,7 @@
 [sub_resource type="SystemFont" id="SystemFont_fqrk6"]
 font_names = PackedStringArray("JetBrains Mono")
 font_weight = 999
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ivd0"]
 font = SubResource("SystemFont_fqrk6")
@@ -35,6 +36,7 @@ region = Rect2(40, 48, 56, 56)
 [sub_resource type="SystemFont" id="SystemFont_ibot1"]
 font_names = PackedStringArray("JetBrains Mono")
 font_weight = 999
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_e0wjr"]
 font = SubResource("SystemFont_ibot1")

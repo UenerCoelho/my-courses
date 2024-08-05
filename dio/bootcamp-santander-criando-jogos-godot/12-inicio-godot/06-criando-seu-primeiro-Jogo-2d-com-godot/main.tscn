@@ -1,6 +1,8 @@
-[gd_scene load_steps=61 format=3 uid="uid://cp5bda4h2qg0x"]
+[gd_scene load_steps=63 format=3 uid="uid://cp5bda4h2qg0x"]
 
 [ext_resource type="PackedScene" uid="uid://bde0jlck61cdp" path="res://player/player.tscn" id="1_2vv78"]
+[ext_resource type="Script" path="res://main.gd" id="1_p4rw2"]
+[ext_resource type="PackedScene" uid="uid://c62jdhwcm4x8f" path="res://ui/game_over_ui.tscn" id="2_5y2ko"]
 [ext_resource type="PackedScene" uid="uid://p2vk0twwwl8r" path="res://systems/mob_spawner.tscn" id="2_b5k4y"]
 [ext_resource type="PackedScene" uid="uid://brw0ho76keplr" path="res://ui/game_ui.tscn" id="3_rqvdo"]
 [ext_resource type="Texture2D" uid="uid://dtlym1r8c5xr5" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="4_085nc"]
@@ -391,18 +393,21 @@ sources/25 = SubResource("TileSetAtlasSource_gdw0y")
 sources/26 = SubResource("TileSetAtlasSource_8wke8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqka4"]
-size = Vector2(5973, 451)
+size = Vector2(6624, 648)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ipi2"]
-size = Vector2(5958, 389.5)
+size = Vector2(6632, 680)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5cr2"]
-size = Vector2(580, 2616)
+size = Vector2(862, 3944)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0pbhi"]
-size = Vector2(379, 2616)
+size = Vector2(780, 3960)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("game_ui")]
+script = ExtResource("1_p4rw2")
+game_ui = NodePath("GameUI")
+game_over_ui_template = ExtResource("2_5y2ko")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -425,22 +430,22 @@ layer_3/tile_data = PackedInt32Array(983009, 14, 0, 1179617, 12, 0, -786462, 10,
 collision_layer = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit"]
-position = Vector2(417.5, -1246.5)
+position = Vector2(472, -1345)
 shape = SubResource("RectangleShape2D_iqka4")
 debug_color = Color(0.462745, 0.0627451, 0.337255, 0.419608)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldLimit"]
-position = Vector2(413, 1789.75)
+position = Vector2(484, 1935)
 shape = SubResource("RectangleShape2D_3ipi2")
 debug_color = Color(0.462745, 0.0627451, 0.337255, 0.419608)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldLimit"]
-position = Vector2(-2268, 277)
+position = Vector2(-2409, 295)
 shape = SubResource("RectangleShape2D_i5cr2")
 debug_color = Color(0.462745, 0.0627451, 0.337255, 0.419608)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldLimit"]
-position = Vector2(3201.5, 277)
+position = Vector2(3402, 303)
 shape = SubResource("RectangleShape2D_0pbhi")
 debug_color = Color(0.462745, 0.0627451, 0.337255, 0.419608)
 
