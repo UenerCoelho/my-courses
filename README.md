@@ -6,7 +6,7 @@ Olá! 👋 Este repositório é um espaço para organizar os materiais dos curso
 
 * **DIO:** [Lista dos cursos da DIO]
 * **Rocketseat:** [Lista dos cursos da Rocketseat]
-* **B7Web:** [Lista dos cursos da B7Web]
+* **B7Web:** [HTML]
 * **CFB Cursos:** [Lista dos cursos da CFB Cursos]
 * **Danki Code:** [Lista dos cursos da Danki Code]
 * **Exercism:** [Lista dos cursos do Exercism]
