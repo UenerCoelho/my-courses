@@ -4,16 +4,16 @@ Olá! 👋 Este repositório é um espaço para organizar os materiais dos curso
 
 **Plataformas:**
 
-* **DIO:** [Lista dos cursos da DIO]
-* **Rocketseat:** [Lista dos cursos da Rocketseat]
-* **B7Web:** [HTML]
-* **CFB Cursos:** [Lista dos cursos da CFB Cursos]
-* **Danki Code:** [Lista dos cursos da Danki Code]
-* **Exercism:** [Lista dos cursos do Exercism]
-* **Full Cycle:** [Lista dos cursos da Full Cycle]
-* **Rodrigo Branas:** [Lista dos cursos do Rodrigo Branas]
-* **Trybe:** [Lista dos cursos da Trybe]
-* **Udemy:** [Lista dos cursos da Udemy]
+* **DIO:** [bootcamp-banco-pan, bootcamp-deal-spring-boot-e-angular, bootcamp-gft-desenvolvimento java-com-ia, etc...]
+* **Rocketseat:** [Trilha Discovery]
+* **B7Web:** [HTML, CSS, JAVASCRIPT, REACT, ANGULAR]
+* **CFB Cursos:** [Fundamentos do Javascript]
+* **Danki Code:** [Lógica de algoritmos]
+* **Exercism:** [Alguns Exercícios realizados]
+* **Rodrigo Branas:** [Fundamentos do Javascript]
+* **Trybe:** [Cursinho gratis de Javascript em texto]
+* **Udemy:** [modern-web-full-course-udemy, game-development, etc...]
+* **Full Cycle:** [Ainda não estudei nada com eles...]
 
 **Objetivo:**
 
