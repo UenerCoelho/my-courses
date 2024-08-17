@@ -2,18 +2,48 @@
 
 Olá! 👋 Este repositório é um espaço para organizar os materiais dos cursos que estou realizando em diversas plataformas de ensino online. Aqui você encontrará arquivos, projetos e exercícios relacionados aos seguintes cursos:
 
+## Plataformas de Estudo
+
+- **[DIO](https://www.dio.me/)**: Plataforma de cursos focada em capacitação para o mercado de trabalho com projetos práticos.
+    * **Boot-camps**
+      - Banco Pan
+      - Deal Spring-boot e Angular 
+      - GFT Desenvolvimento Java com IA
+      - Santander Criando jogos Godot
+
+- **[Rocketseat](https://www.rocketseat.com.br/)**: Cursos intensivos sobre desenvolvimento web e mobile, com foco em tecnologias modernas.
+    * Trilha Discovery
+
+- **[B7Web](https://b7web.com.br/)**: Cursos de desenvolvimento web e mobile, do básico ao avançado.
+    * HTML, CSS, JS
+    * REACT
+    * ANGULAR
+
+- **[CFB-Cursos](https://www.youtube.com/cfbcursos)**: Canal com uma vasta quantidade de tutoriais sobre desenvolvimento de software.
+    * Fundamentos do Javascript
+
+- **[Danki Code](https://dankicode.com/)**: Plataforma com cursos voltados para desenvolvimento web e mobile, incluindo design e marketing digital.
+    * Lógica de algoritmos
+
+- **[Exercism](https://exercism.io/)**: Plataforma de prática de código com desafios em diversas linguagens de programação.
+    * Alguns Exercícios realizados
+
+- **[Full Cycle](https://fullcycle.com.br/)**: Cursos voltados para desenvolvimento de software com foco em microserviços, DevOps e cloud.
+    * Fundamentos do Javascript
+    
+- **[Rodrigo Branas](https://www.youtube.com/rodrigobranas)**: Canal e cursos focados em desenvolvimento de software com práticas e conceitos avançados.
+    * Cursinho gratis de Javascript em texto
+
+- **[Trybe](https://www.betrybe.com/)**: Escola de desenvolvimento web que oferece um currículo completo e atualizado com as demandas do mercado.
+    * Modern Web Full Course, 
+    * Game Development
+
+- **[Udemy](https://www.udemy.com/)**: Plataforma global com uma vasta gama de cursos em diversas áreas, incluindo tecnologia e desenvolvimento de software.
+    * Ainda não estudei nada com eles...
+
+
 **Plataformas:**
 
-* **DIO:** [bootcamps Banco Pan, Deal Spring-boot e Angular, GFT Desenvolvimento Java com IA, etc...]
-* **Rocketseat:** [Trilha Discovery]
-* **B7Web:** [HTML, CSS, JS, REACT, ANGULAR]
-* **CFB Cursos:** [Fundamentos do Javascript]
-* **Danki Code:** [Lógica de algoritmos]
-* **Exercism:** [Alguns Exercícios realizados]
-* **Rodrigo Branas:** [Fundamentos do Javascript]
-* **Trybe:** [Cursinho gratis de Javascript em texto]
-* **Udemy:** [Modern Web Full Course, Game Development, etc...]
-* **Full Cycle:** [Ainda não estudei nada com eles...]
 
 **Objetivo:**
 
@@ -43,17 +73,5 @@ Sinta-se à vontade para contribuir com este repositório! Se você encontrar al
 * Os materiais aqui disponibilizados são para fins de estudo e aprendizado.
 * Os direitos autorais dos cursos pertencem às plataformas de ensino mencionadas.
 
-## Plataformas de Estudo
-
-- **[DIO](https://www.dio.me/)**: Plataforma de cursos focada em capacitação para o mercado de trabalho com projetos práticos.
-- **[Rocketseat](https://www.rocketseat.com.br/)**: Cursos intensivos sobre desenvolvimento web e mobile, com foco em tecnologias modernas.
-- **[B7Web](https://b7web.com.br/)**: Cursos de desenvolvimento web e mobile, do básico ao avançado.
-- **[CFB-Cursos](https://www.youtube.com/cfbcursos)**: Canal com uma vasta quantidade de tutoriais sobre desenvolvimento de software.
-- **[Danki Code](https://dankicode.com/)**: Plataforma com cursos voltados para desenvolvimento web e mobile, incluindo design e marketing digital.
-- **[Exercism](https://exercism.io/)**: Plataforma de prática de código com desafios em diversas linguagens de programação.
-- **[Full Cycle](https://fullcycle.com.br/)**: Cursos voltados para desenvolvimento de software com foco em microserviços, DevOps e cloud.
-- **[Rodrigo Branas](https://www.youtube.com/rodrigobranas)**: Canal e cursos focados em desenvolvimento de software com práticas e conceitos avançados.
-- **[Trybe](https://www.betrybe.com/)**: Escola de desenvolvimento web que oferece um currículo completo e atualizado com as demandas do mercado.
-- **[Udemy](https://www.udemy.com/)**: Plataforma global com uma vasta gama de cursos em diversas áreas, incluindo tecnologia e desenvolvimento de software.
 
 **Obrigado por visitar!**
