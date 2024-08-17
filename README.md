@@ -4,15 +4,15 @@ Olá! 👋 Este repositório é um espaço para organizar os materiais dos curso
 
 **Plataformas:**
 
-* **DIO:** [bootcamp-banco-pan, bootcamp-deal-spring-boot-e-angular, bootcamp-gft-desenvolvimento java-com-ia, etc...]
+* **DIO:** [bootcamps Banco Pan, Deal Spring-boot e Angular, GFT Desenvolvimento Java com IA, etc...]
 * **Rocketseat:** [Trilha Discovery]
-* **B7Web:** [HTML, CSS, JAVASCRIPT, REACT, ANGULAR]
+* **B7Web:** [HTML, CSS, JS, REACT, ANGULAR]
 * **CFB Cursos:** [Fundamentos do Javascript]
 * **Danki Code:** [Lógica de algoritmos]
 * **Exercism:** [Alguns Exercícios realizados]
 * **Rodrigo Branas:** [Fundamentos do Javascript]
 * **Trybe:** [Cursinho gratis de Javascript em texto]
-* **Udemy:** [modern-web-full-course-udemy, game-development, etc...]
+* **Udemy:** [Modern Web Full Course, Game Development, etc...]
 * **Full Cycle:** [Ainda não estudei nada com eles...]
 
 **Objetivo:**
