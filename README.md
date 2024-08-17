@@ -1,4 +1,4 @@
-## Repositório de Estudos 🚀
+# Repositório de Estudos 🚀
 
 Olá! 👋 Este repositório é um espaço para organizar os materiais dos cursos que estou realizando em diversas plataformas de ensino online. Aqui você encontrará arquivos, projetos e exercícios relacionados aos seguintes cursos:
 
@@ -40,10 +40,6 @@ Olá! 👋 Este repositório é um espaço para organizar os materiais dos curso
 
 - **[Udemy](https://www.udemy.com/)**: Plataforma global com uma vasta gama de cursos em diversas áreas, incluindo tecnologia e desenvolvimento de software.
     * Ainda não estudei nada com eles...
-
-
-**Plataformas:**
-
 
 **Objetivo:**
 
