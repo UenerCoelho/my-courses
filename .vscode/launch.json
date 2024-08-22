@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MinhaClasse",
+      "request": "launch",
+      "mainClass": "MinhaClasse"
+    },
+    {
+      "type": "java",
       "name": "ApplicationPropertiesApplication",
       "request": "launch",
       "mainClass": "dio.properties.value.application_properties.ApplicationPropertiesApplication"
