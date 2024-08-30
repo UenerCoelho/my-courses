@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BoletimEstudantil",
+      "request": "launch",
+      "mainClass": "BoletimEstudantil",
+      "projectName": ""
+    },
+    {
+      "type": "java",
       "name": "MinhaClasse",
       "request": "launch",
       "mainClass": "MinhaClasse"
