@@ -44,5 +44,35 @@ public class App {
         System.out.println("Neagação de booleanos usando (!): " + !booleana);
         booleana = !booleana;
         System.out.println("Neagação de booleanos usando (!): " + !booleana);
+
+        // Operador Ternário
+        int varA, varB;
+        varA = 5;
+        varB = 6;
+
+        String resultado = varA == varB ? "Verdadeiro" : "Falso";
+
+        System.out.println("Variável A = " + varA + " é igual a Variável B = " + varB + " ? R.: " + resultado);
+
+        // Operadores Relacionais
+        int num1 = 1, num2 = 2;
+
+        boolean yesNot = num1 == num2;
+
+        System.out.println("Número é igual (==) de número 2? R.:" + yesNot);
+
+        yesNot = num1 != num2;
+        System.out.println("Número é igual (!=) de número 2? R.:" + yesNot);
+
+        yesNot = num1 > num2;
+        System.out.println("Número é igual (>) de número 2? R.:" + yesNot);
+
+        yesNot = num1 < num2;
+        System.out.println("Número é igual (<) de número 2? R.:" + yesNot);
+
+        String nameUm = "Uener", nameDois = "Uener", nameTres = new String("Uener");
+        System.out.println(nameUm == nameDois);
+        System.out.println(nameUm.equals(nameTres));
+
     }
 }
