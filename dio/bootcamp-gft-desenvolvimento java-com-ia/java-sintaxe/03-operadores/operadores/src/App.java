@@ -85,7 +85,7 @@ public class App {
         if (condition1 || condition2) {
             System.out.println("Apenas uma é verdadeira!");
         }
-        System.out.println("Fim!");
+        // System.out.println("Fim!");
 
     }
 }
