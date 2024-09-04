@@ -74,5 +74,18 @@ public class App {
         System.out.println(nameUm == nameDois);
         System.out.println(nameUm.equals(nameTres));
 
+        // Operadores Lógicos
+        // && Operador "E"
+        boolean condition1 = true;
+        boolean condition2 = false;
+        if (condition1 && condition2) {
+            System.out.println("As duas condições são verdadeiras!");
+            // || Operador "ou"
+        }
+        if (condition1 || condition2) {
+            System.out.println("Apenas uma é verdadeira!");
+        }
+        System.out.println("Fim!");
+
     }
 }
