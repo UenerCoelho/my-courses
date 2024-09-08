@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "AboutMe",
+      "request": "launch",
+      "mainClass": "AboutMe"
+    },
+    {
+      "type": "java",
       "name": "Usuario",
       "request": "launch",
       "mainClass": "Usuario"
@@ -38,7 +44,7 @@
       "cwd": "${workspaceFolder}",
       "mainClass": "dio.primeiros_passos_spring_boot.aula_um.AulaUmApplication",
       "projectName": "aula_um",
-      "args": "",
+      "args": ["Uener", "Coelho","40","1.84"],
       "envFile": "${workspaceFolder}/.env"
     }
   ]
