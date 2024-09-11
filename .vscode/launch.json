@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CaixaEletronico",
+      "request": "launch",
+      "mainClass": "CaixaEletronico",
+      "projectName": ""
+    },
+    {
+      "type": "java",
       "name": "AboutMe",
       "request": "launch",
       "mainClass": "AboutMe"
@@ -44,7 +51,12 @@
       "cwd": "${workspaceFolder}",
       "mainClass": "dio.primeiros_passos_spring_boot.aula_um.AulaUmApplication",
       "projectName": "aula_um",
-      "args": ["Uener", "Coelho","40","1.84"],
+      "args": [
+        "Uener",
+        "Coelho",
+        "40",
+        "1.84"
+      ],
       "envFile": "${workspaceFolder}/.env"
     }
   ]
