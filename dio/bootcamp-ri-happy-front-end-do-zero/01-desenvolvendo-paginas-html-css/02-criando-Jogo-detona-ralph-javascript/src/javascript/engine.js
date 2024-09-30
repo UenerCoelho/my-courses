@@ -27,6 +27,12 @@ function countDown() {
   }
 }
 
+function playSound(soundName) {
+  let audio = new Audio(`./src/audio/${soundName}.m4a`)
+  audio.volume = 0.01
+  audio.play()
+}
+
 function randomSquare() {
   state.view.squares.forEach(square => {
     square.classList.remove('enemy')
@@ -49,6 +55,7 @@ function addListenerHitBox() {
         state.values.result++
         state.view.score.textContent = state.values.result
         state.values.hitPosition = null
+        playSound('hit')
       }
     })
   })
