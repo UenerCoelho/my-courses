@@ -75,22 +75,22 @@ async function createCardImage(IdCard, fieldSide) {
   return cardImage
 }
 
-async function setCardsField(cardId) {
-  await removeAllCardsImages()
+// async function setCardsField(cardId) {
+//   await removeAllCardsImages()
 
-  let computerCardId = await getRandomCardId()
+//   let computerCardId = await getRandomCardId()
 
-  state.fieldCards.player.style.display = 'block'
-  state.fieldCards.computer.style.display = 'block'
+//   state.fieldCards.player.style.display = 'block'
+//   state.fieldCards.computer.style.display = 'block'
 
-  state.fieldCards.player.src = cardData[cardId].img
-  state.fieldCards.computer.src = cardData[computerCardId].img
+//   state.fieldCards.player.src = cardData[cardId].img
+//   state.fieldCards.computer.src = cardData[computerCardId].img
 
-  let duelResults = await checkDuelResults(cardId, computerCardId)
+//   let duelResults = await checkDuelResults(cardId, computerCardId)
 
-  await updateScore()
-  await drawButton(duelResults)
-}
+//   await updateScore()
+//   await drawButton(duelResults)
+// }
 
 async function removeAllCardsImages() {
   let cards = document.querySelector('#computer-cards')
