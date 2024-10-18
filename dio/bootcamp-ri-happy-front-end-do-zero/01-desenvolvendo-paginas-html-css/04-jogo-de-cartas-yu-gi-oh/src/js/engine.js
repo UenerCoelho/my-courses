@@ -2,6 +2,7 @@ const state = {
   score: {
     playerScore: 0,
     computerScore: 0,
+    empateScore: 0,
     scoreBox: document.getElementById('score_points')
   },
   cardSprites: {
@@ -10,8 +11,12 @@ const state = {
     type: document.getElementById('card-type')
   },
   fieldCards: {
-    player: document.getElementById('player-cards'),
-    computer: document.getElementById('computer-cards')
+    player: document.getElementById('player-field-card'),
+    computer: document.getElementById('computer-field-card')
+  },
+  playerSides: {
+    playerBox: document.querySelector('#player-cards'),
+    computerBox: document.querySelector('#computer-cards')
   },
   actions: {
     button: document.getElementById('next-duel')
@@ -30,7 +35,8 @@ const cardData = [
     type: 'Paper',
     img: `${pathImages}dragon.png`,
     WinOf: [1],
-    LoseOf: [2]
+    LoseOf: [2],
+    TieOf: [0]
   },
   {
     id: 1,
@@ -38,7 +44,8 @@ const cardData = [
     type: 'Rock',
     img: `${pathImages}magician.png`,
     WinOf: [1],
-    LoseOf: [0]
+    LoseOf: [0],
+    TieOf: [1]
   },
   {
     id: 2,
@@ -46,7 +53,8 @@ const cardData = [
     type: 'Scissors',
     img: `${pathImages}exodia.png`,
     WinOf: [0],
-    LoseOf: [1]
+    LoseOf: [1],
+    TieOf: [2]
   }
 ]
 
@@ -75,37 +83,74 @@ async function createCardImage(IdCard, fieldSide) {
   return cardImage
 }
 
-// async function setCardsField(cardId) {
-//   await removeAllCardsImages()
+async function setCardsField(cardId) {
+  await removeAllCardsImages()
 
-//   let computerCardId = await getRandomCardId()
+  let computerCardId = await getRandomCardId()
 
-//   state.fieldCards.player.style.display = 'block'
-//   state.fieldCards.computer.style.display = 'block'
+  state.fieldCards.player.style.display = 'block'
+  state.fieldCards.computer.style.display = 'block'
 
-//   state.fieldCards.player.src = cardData[cardId].img
-//   state.fieldCards.computer.src = cardData[computerCardId].img
+  state.fieldCards.player.src = cardData[cardId].img
+  state.fieldCards.computer.src = cardData[computerCardId].img
 
-//   let duelResults = await checkDuelResults(cardId, computerCardId)
+  let duelResults = await checkDuelResults(cardId, computerCardId)
 
-//   await updateScore()
-//   await drawButton(duelResults)
-// }
+  await updateScore()
+  await drawButton(duelResults)
+}
+
+async function updateScore() {
+  state.score.scoreBox.innerText = `Score: 
+
+    Win: ${state.score.playerScore} 
+
+    Lose: ${state.score.computerScore}
+
+    Empate: ${state.score.empateScore}`
+}
+
+async function checkDuelResults(playerCardId, computerCardId) {
+  let duelResults
+  let playerCard = cardData[playerCardId]
+
+  if (playerCard.WinOf.includes(computerCardId)) {
+    duelResults = 'Ganhou'
+    state.score.playerScore++
+    await playAudio('win')
+  }
+  if (playerCard.LoseOf.includes(computerCardId)) {
+    duelResults = 'Perdeu'
+    state.score.computerScore++
+    await playAudio('lose')
+  }
+  if (playerCard.TieOf.includes(computerCardId)) {
+    duelResults = 'Empate'
+    state.score.empateScore++
+    await playAudio('lose')
+  }
+
+  return duelResults
+}
+
+async function drawButton(text) {
+  state.actions.button.innerText = text
+  state.actions.button.style.display = 'block'
+}
 
 async function removeAllCardsImages() {
-  let cards = document.querySelector('#computer-cards')
-  let imgElements = cards.querySelectorAll('img')
+  let { playerBox, computerBox } = state.playerSides
+  let imgElements = playerBox.querySelectorAll('img')
   imgElements.forEach(img => img.remove())
 
-  cards = document.querySelector('#player-cards')
-  imgElements = cards.querySelectorAll('img')
+  imgElements = computerBox.querySelectorAll('img')
   imgElements.forEach(img => img.remove())
 }
 
 async function drawSelectCard(index) {
   state.cardSprites.avatar.src = cardData[index].img
   state.cardSprites.name.innerText = cardData[index].name
-  state.cardSprites.type.innerText = 'Attribute : ' + cardData[index].type
+  state.cardSprites.type.innerText = 'Attribute: ' + cardData[index].type
 }
 
 async function drawCards(cardNumbers, fieldSide) {
@@ -120,6 +165,21 @@ async function drawCards(cardNumbers, fieldSide) {
 function init() {
   drawCards(5, playerSides.player1)
   drawCards(5, playerSides.computer)
+}
+
+async function resetDuel() {
+  state.cardSprites.avatar.src = ''
+  state.actions.button.style.display = 'none'
+
+  state.fieldCards.player.style.display = 'none'
+  state.fieldCards.computer.style.display = 'none'
+
+  init()
+}
+
+async function playAudio(status) {
+  const audio = new Audio(`./src/assets/audios/${status}.wav`)
+  audio.play()
 }
 
 init()

@@ -21,13 +21,14 @@
   <body>
     <div class="bg-video">
       <video class="video" autoplay loop muted>
-        <source src="./src/assets/video/yugi.mp4" />
+        <source src="./src/assets/video/yugi.mp4" type="video/mp4" />
       </video>
     </div>
+
     <div class="container">
       <div class="container__left framed-golden-2">
         <div class="score_box frame">
-          <span id="score_points">Win: 0 | Lose: 0</span>
+          <span id="score_points">Score: </span>
         </div>
         <div class="menu_avatar">
           <img id="card-image" />
@@ -43,18 +44,24 @@
 
           <div class="card-versus__container">
             <div class="versus-top">
+              <!--  height="180px" width="125px"  -->
               <div class="card-infield">
                 <img id="player-field-card" />
               </div>
+
               <img src="./src/assets/icons/millenium2.png" height="100px" />
+
               <div class="card-infield">
                 <img id="computer-field-card" />
               </div>
             </div>
+
             <div class="versus-bottom">
-              <button id="next-duel" class="rpgui-button" onclick="resetDuel()">
-                GANHOU
-              </button>
+              <button
+                id="next-duel"
+                class="rpgui-button"
+                onclick="resetDuel()"
+              ></button>
             </div>
           </div>
 

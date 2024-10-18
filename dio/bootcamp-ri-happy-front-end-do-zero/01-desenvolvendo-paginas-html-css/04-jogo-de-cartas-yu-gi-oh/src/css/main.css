@@ -54,8 +54,13 @@ body {
 
 .score_box {
   background-color: #bbb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
 
-  padding: 30px;
+.score_box span {
+  padding: 5px;
 }
 
 .frame {
