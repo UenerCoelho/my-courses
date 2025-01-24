@@ -3,7 +3,7 @@ export default function Inicio(){
       <div>
         <h1>Início</h1>
         <h2>Teste médio</h2>
-        <h3>Testículos</h3>
+        <h3><a href="./estiloso">Estiloso</a></h3>
       </div>
   )
 }
