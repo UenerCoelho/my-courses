@@ -1,4 +1,8 @@
-.roxo{
-    height: 100vh;
-    background-color: #670bbd;
+.roxo {
+  height: 100vh;
+  background-color: #670bbd;
+}
+
+.roxo h1 {
+  margin: 0;
 }

@@ -1,10 +1,16 @@
 import Link from 'next/link'
+import styles from '../styles/Layout.module.css'
 
-export default function(props){
+export default function Layout(props){
   return (
-    <div>
-      <Link href="/">Home</Link>
-      {props.children}
+    <div className='styles.Layout'>
+      <div className={styles.cabecalho}>
+        <h1>{props.titulo ?? 'Sobre'}</h1>
+        <Link href="/">Home</Link>
+      </div>
+      <div className={styles.conteudo}>
+        {props.children}
+      </div>
 </div>
   )
 }
