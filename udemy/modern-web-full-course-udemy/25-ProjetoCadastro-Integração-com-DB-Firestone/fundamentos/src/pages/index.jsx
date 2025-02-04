@@ -13,7 +13,8 @@ export default function Inicio(){
         {/* <h1>Início</h1> */}
         <Navegador destino='/estiloso' texto='Estiloso'/>
         <Navegador destino='/exemplo' texto='Exemplo' cor='darkviolet'/>
-        {/* <Navegador destino='/jsx' /> */}
+        <Navegador destino='/navegacao' texto='Navegação #01' cor='darkgreen'/>
+
       </div>
   )
 }
