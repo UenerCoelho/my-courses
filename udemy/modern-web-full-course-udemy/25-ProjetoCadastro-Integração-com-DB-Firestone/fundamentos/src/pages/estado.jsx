@@ -9,8 +9,8 @@ export default function Estado(){
   }
   return (
     <Layout titulo='Componente com Estado'>
-      <div>{numero}</div>
-      <button onClick={incrementar}>Incrementar</button>
+      <div>{ numero }</div>
+      <button onClick={ incrementar }>Incrementar</button>
     </Layout>
   )
 }
