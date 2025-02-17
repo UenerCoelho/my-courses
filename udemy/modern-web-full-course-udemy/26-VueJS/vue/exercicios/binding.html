@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Binding</title>
-    <link rel="stylesheet" href="/css/estilo.css">
-    <script src="/js/vue.min.js"></script>
-</head>
-<body class="exercicio">
+    <link rel="stylesheet" href="./css/estilo.css" />
+    <script src="./js/vue.min.js"></script>
+  </head>
+  <body class="exercicio">
+    <div id="binding">
+      <p><a v-bind:href="link" target="_blank">google</a></p>
+      <p><a :href="link" target="_blank">google</a></p>
+      <p>
+        <input type="text" v-model="nome" /><br />
+        <span>{{ nome }}</span>
+      </p>
+      <p>
+        <input type="text" :valueas="nome2" /><br />
+        <span>{{ nome2 }}</span>
+      </p>
+    </div>
 
     <script>
-        // ...
+      new Vue({
+        el: '#binding',
+        data: {
+          nome: 'Escreva seu nome',
+          nome2: 'Escreva seu nome',
+          link: 'https://www.google.com.br'
+        },
+        watch: {
+          nome(value) {
+            console.log(value.toUpperCase())
+          }
+        }
+      })
     </script>
-</body>
+  </body>
 </html>
